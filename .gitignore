@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# 地图管线下载缓存
+tools/map_pipeline/.cache/
+__pycache__/

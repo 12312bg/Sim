@@ -24,6 +24,8 @@ var region_order: Array[String] = []
 var links: Array[Dictionary] = []     # {a, b, type, weight}
 var rules: Dictionary = {}
 var labels: Dictionary = {}
+## 场景关联的地图数据（res:// 路径），没有地图的场景为空。
+var map_path: String = ""
 var upgrades := UpgradeTree.new()
 var opposition := Opposition.new()
 var points: int = 0
@@ -45,6 +47,7 @@ func setup(scenario: Dictionary, upgrade_defs: Array, seed_value: int = 0) -> vo
 	rng.seed = seed_value
 	rules = scenario.get("rules", {})
 	labels = scenario.get("labels", {})
+	map_path = String(scenario.get("map", ""))
 	win_condition = WinCondition.REMOVE_ALL if rules.get("win_condition", "") == "remove_all" else WinCondition.CONVERT_ALL
 
 	regions.clear()

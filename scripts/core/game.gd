@@ -5,7 +5,7 @@ extends Node
 signal session_started(world: SimWorld)
 signal speed_changed(speed: int)
 
-const DEFAULT_SCENARIO := "res://data/scenarios/default.json"
+const DEFAULT_SCENARIO := "res://data/scenarios/world.json"
 const DEFAULT_UPGRADES := "res://data/upgrades/default.json"
 const SAVE_PATH := "user://save.json"
 

@@ -12,7 +12,8 @@ var _checks := 0
 
 func _init() -> void:
 	for t in ["test_data_loads", "test_upgrade_rules", "test_spread_and_points",
-			"test_determinism", "test_game_ends", "test_save_roundtrip", "test_balance_report"]:
+			"test_determinism", "test_game_ends", "test_save_roundtrip", "test_balance_report",
+			"test_world_scenario", "test_world_balance_report"]:
 		print("== ", t)
 		call(t)
 	print("\n%d checks, %d failures" % [_checks, _failures])
@@ -26,9 +27,12 @@ func check(cond: bool, msg: String) -> void:
 		printerr("  FAIL: ", msg)
 
 
-func make_world(seed_value: int = 42) -> SimWorld:
+const WORLD_SCENARIO := "res://data/scenarios/world.json"
+
+
+func make_world(seed_value: int = 42, scenario: String = SCENARIO) -> SimWorld:
 	var w := SimWorld.new()
-	w.setup(DataLoader.load_scenario(SCENARIO), DataLoader.load_upgrades(UPGRADES), seed_value)
+	w.setup(DataLoader.load_scenario(scenario), DataLoader.load_upgrades(UPGRADES), seed_value)
 	return w
 
 
@@ -100,8 +104,45 @@ func test_save_roundtrip() -> void:
 	check(JSON.stringify(a.to_dict()) == JSON.stringify(b.to_dict()), "save/load continues identically")
 
 
+func test_world_scenario() -> void:
+	var w := make_world(5, WORLD_SCENARIO)
+	check(w.regions.size() > 200, "world has ~233 regions (%d)" % w.regions.size())
+	check(w.regions.has("CHN") and not w.regions.has("TWN"), "China worldview: TWN merged into CHN")
+	check(w.map_path != "", "world scenario references a map")
+	var map: Dictionary = DataLoader.load_json(w.map_path)
+	var active := {}
+	for m in map["regions"]:
+		if m["active"]:
+			active[m["id"]] = true
+	var missing := 0
+	for id in w.regions:
+		if not active.has(id):
+			missing += 1
+	check(missing == 0 and active.size() == w.regions.size(), "scenario regions match map active regions")
+	var linked := {}
+	for l in w.links:
+		linked[l["a"]] = true
+		linked[l["b"]] = true
+	check(linked.size() == w.regions.size(), "every region has a link")
+	w.start_in("CHN")
+	var t0 := Time.get_ticks_usec()
+	run_days(w, 365)
+	var per_day := (Time.get_ticks_usec() - t0) / 365.0 / 1000.0
+	print("  模拟耗时 %.2f ms/天" % per_day)
+	check(per_day < 5.0, "step is fast enough")
+	check(w.totals().reached > 20, "spreads across the world (%d)" % w.totals().reached)
+
+
+func test_world_balance_report() -> void:
+	_report(WORLD_SCENARIO, "CHN")
+
+
 ## 不是断言：打印几种简单策略的结局，供调参参考。
 func test_balance_report() -> void:
+	_report(SCENARIO, "sunlands")
+
+
+func _report(scenario: String, start: String) -> void:
 	var strategies := {
 		"不买升级": [],
 		"传播优先": ["potency_1", "land_1", "air_1", "sea_1", "potency_2", "air_2", "sea_2", "land_2", "potency_3",
@@ -113,8 +154,8 @@ func test_balance_report() -> void:
 		var wins := 0
 		var days := 0
 		for s in 20:
-			var w := make_world(1000 + s)
-			w.start_in("sunlands")
+			var w := make_world(1000 + s, scenario)
+			w.start_in(start)
 			var queue: Array = strategies[name].duplicate()
 			while not w.finished and w.day < 3000:
 				while not queue.is_empty() and w.buy_upgrade(queue[0]) == "":

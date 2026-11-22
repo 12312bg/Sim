@@ -1,0 +1,8482 @@
+{
+ "id": "world",
+ "name": "真实世界",
+ "map": "res://data/map/world_map.json",
+ "labels": {
+  "agent": "传播体",
+  "converted": "已转化",
+  "converted_verb": "转化",
+  "removed": "已移除",
+  "points": "点数",
+  "opposition": "反制研究"
+ },
+ "rules": {
+  "win_condition": "convert_all",
+  "seed_amount": 1,
+  "base_spread": 0.12,
+  "base_lethality": 0.0,
+  "base_visibility": 0.2,
+  "awareness_rate": 0.03,
+  "cross_base": 0.03,
+  "cross_presence_exponent": 1.5,
+  "closure_threshold": 0.6,
+  "closure_strength": 0.9,
+  "closure_types": [
+   "air",
+   "sea"
+  ],
+  "trait_resist": {
+   "climate": {
+    "hot": 0.0,
+    "temperate": 0.15,
+    "cold": 0.35
+   },
+   "wealth": {
+    "poor": 0.0,
+    "mid": 0.2,
+    "rich": 0.4
+   }
+  },
+  "opposition": {
+   "start_awareness": 0.12,
+   "base_rate": 0.006
+  },
+  "points": {
+   "start": 4,
+   "per_new_region": 1,
+   "convert_chunk": 250000000,
+   "bubble_chance": 0.08,
+   "bubble_value": 1
+  }
+ },
+ "regions": [
+  {
+   "id": "ABW",
+   "name": "阿鲁巴",
+   "population": 106314,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "AFG",
+   "name": "阿富汗",
+   "population": 38041754,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "AGO",
+   "name": "安哥拉",
+   "population": 31825295,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "AIA",
+   "name": "安圭拉",
+   "population": 14731,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "ALB",
+   "name": "阿尔巴尼亚",
+   "population": 2854191,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "ALD",
+   "name": "奥兰",
+   "population": 29884,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "AND",
+   "name": "安道尔",
+   "population": 77142,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "ARE",
+   "name": "阿拉伯联合酋长国",
+   "population": 9770529,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "ARG",
+   "name": "阿根廷",
+   "population": 44938712,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "ARM",
+   "name": "亚美尼亚",
+   "population": 2957731,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "ASM",
+   "name": "美属萨摩亚",
+   "population": 55312,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "ATG",
+   "name": "安提瓜和巴布达",
+   "population": 97118,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "AUS",
+   "name": "澳大利亚",
+   "population": 25364307,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "AUT",
+   "name": "奥地利",
+   "population": 8877067,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "AZE",
+   "name": "阿塞拜疆",
+   "population": 10023318,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "BDI",
+   "name": "布隆迪",
+   "population": 11530580,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "BEL",
+   "name": "比利时",
+   "population": 11484055,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "BEN",
+   "name": "贝宁",
+   "population": 11801151,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "BFA",
+   "name": "布基纳法索",
+   "population": 20321378,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "BGD",
+   "name": "孟加拉国",
+   "population": 163046161,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "BGR",
+   "name": "保加利亚",
+   "population": 6975761,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "BHR",
+   "name": "巴林",
+   "population": 1641172,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "BHS",
+   "name": "巴哈马",
+   "population": 389482,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "BIH",
+   "name": "波斯尼亚和黑塞哥维那",
+   "population": 3301000,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "BLM",
+   "name": "圣巴泰勒米",
+   "population": 9961,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "BLR",
+   "name": "白俄罗斯",
+   "population": 9466856,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "cold",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "BLZ",
+   "name": "伯利兹",
+   "population": 390353,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "BMU",
+   "name": "百慕大",
+   "population": 63918,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "BOL",
+   "name": "玻利维亚",
+   "population": 11513100,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "BRA",
+   "name": "巴西",
+   "population": 211049527,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "BRB",
+   "name": "巴巴多斯",
+   "population": 287025,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "BRN",
+   "name": "文莱",
+   "population": 433285,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "BTN",
+   "name": "不丹",
+   "population": 763092,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "BWA",
+   "name": "博茨瓦纳",
+   "population": 2303697,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "CAF",
+   "name": "中非共和国",
+   "population": 4745185,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "CAN",
+   "name": "加拿大",
+   "population": 37589262,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "CHE",
+   "name": "瑞士",
+   "population": 8574832,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "CHL",
+   "name": "智利",
+   "population": 18952038,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "CHN",
+   "name": "中国",
+   "population": 1421315000,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "CIV",
+   "name": "科特迪瓦",
+   "population": 25716544,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "CMR",
+   "name": "喀麦隆",
+   "population": 25876380,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "COD",
+   "name": "刚果民主共和国",
+   "population": 86790567,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "COG",
+   "name": "刚果共和国",
+   "population": 5380508,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "COK",
+   "name": "库克群岛",
+   "population": 17459,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "COL",
+   "name": "哥伦比亚",
+   "population": 50339443,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "COM",
+   "name": "科摩罗",
+   "population": 850886,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "CPV",
+   "name": "佛得角",
+   "population": 549935,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "CRI",
+   "name": "哥斯达黎加",
+   "population": 5047561,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "CUB",
+   "name": "古巴",
+   "population": 11333483,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "CUW",
+   "name": "库拉索",
+   "population": 157538,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "CYM",
+   "name": "开曼群岛",
+   "population": 64948,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "CYP",
+   "name": "塞浦路斯",
+   "population": 1198575,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "CZE",
+   "name": "捷克",
+   "population": 10669709,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "DEU",
+   "name": "德国",
+   "population": 83132799,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "DJI",
+   "name": "吉布提",
+   "population": 973560,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "DMA",
+   "name": "多米尼克",
+   "population": 71808,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "DNK",
+   "name": "丹麦",
+   "population": 5818553,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "DOM",
+   "name": "多米尼加",
+   "population": 10738958,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "DZA",
+   "name": "阿尔及利亚",
+   "population": 43053054,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "ECU",
+   "name": "厄瓜多尔",
+   "population": 17373662,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "EGY",
+   "name": "埃及",
+   "population": 100388073,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "ERI",
+   "name": "厄立特里亚",
+   "population": 6081196,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "ESB",
+   "name": "泽凯利亚军营",
+   "population": 7850,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "ESP",
+   "name": "西班牙",
+   "population": 47076781,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "EST",
+   "name": "爱沙尼亚",
+   "population": 1326590,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "ETH",
+   "name": "埃塞俄比亚",
+   "population": 112078730,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "FIN",
+   "name": "芬兰",
+   "population": 5520314,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "FJI",
+   "name": "斐济",
+   "population": 889953,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "FLK",
+   "name": "福克兰群岛",
+   "population": 3398,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "FRA",
+   "name": "法国",
+   "population": 67059887,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "FRO",
+   "name": "法罗群岛",
+   "population": 48678,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "FSM",
+   "name": "密克罗尼西亚联邦",
+   "population": 113815,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "GAB",
+   "name": "加蓬",
+   "population": 2172579,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "GBR",
+   "name": "英国",
+   "population": 66834405,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "GEO",
+   "name": "格鲁吉亚",
+   "population": 3720382,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "GGY",
+   "name": "根西",
+   "population": 62792,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "GHA",
+   "name": "加纳",
+   "population": 30417856,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "GIB",
+   "name": "直布罗陀",
+   "population": 33701,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "GIN",
+   "name": "几内亚",
+   "population": 12771246,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "GMB",
+   "name": "冈比亚",
+   "population": 2347706,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "GNB",
+   "name": "几内亚比绍",
+   "population": 1920922,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "GNQ",
+   "name": "赤道几内亚",
+   "population": 1355986,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "GRC",
+   "name": "希腊",
+   "population": 10716322,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "GRD",
+   "name": "格林纳达",
+   "population": 112003,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "GRL",
+   "name": "格陵兰",
+   "population": 56225,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "GTM",
+   "name": "危地马拉",
+   "population": 16604026,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "GUM",
+   "name": "关岛",
+   "population": 167294,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "GUY",
+   "name": "圭亚那",
+   "population": 782766,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "HKG",
+   "name": "中国香港",
+   "population": 7507400,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "HND",
+   "name": "洪都拉斯",
+   "population": 9746117,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "HRV",
+   "name": "克罗地亚",
+   "population": 4067500,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "HTI",
+   "name": "海地",
+   "population": 11263077,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "HUN",
+   "name": "匈牙利",
+   "population": 9769949,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "IDN",
+   "name": "印度尼西亚",
+   "population": 270625568,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "IMN",
+   "name": "马恩岛",
+   "population": 84584,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "IND",
+   "name": "印度",
+   "population": 1366417754,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "IOA",
+   "name": "澳属印度洋领地",
+   "population": 2387,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "IOT",
+   "name": "英属印度洋领地",
+   "population": 3000,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "IRL",
+   "name": "爱尔兰",
+   "population": 4941444,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "IRN",
+   "name": "伊朗",
+   "population": 82913906,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "IRQ",
+   "name": "伊拉克",
+   "population": 39309783,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "ISL",
+   "name": "冰岛",
+   "population": 361313,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "ISR",
+   "name": "以色列",
+   "population": 9053300,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "ITA",
+   "name": "意大利",
+   "population": 60297396,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "JAM",
+   "name": "牙买加",
+   "population": 2948279,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "JEY",
+   "name": "泽西",
+   "population": 107800,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "JOR",
+   "name": "约旦",
+   "population": 10101694,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "JPN",
+   "name": "日本",
+   "population": 126264931,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "KAZ",
+   "name": "哈萨克斯坦",
+   "population": 18513930,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "cold",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "KEN",
+   "name": "肯尼亚",
+   "population": 52573973,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "KGZ",
+   "name": "吉尔吉斯斯坦",
+   "population": 6456900,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "KHM",
+   "name": "柬埔寨",
+   "population": 16486542,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "KIR",
+   "name": "基里巴斯",
+   "population": 117606,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "KNA",
+   "name": "圣基茨和尼维斯",
+   "population": 52834,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "KOR",
+   "name": "韩国",
+   "population": 51709098,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "KWT",
+   "name": "科威特",
+   "population": 4207083,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "LAO",
+   "name": "老挝",
+   "population": 7169455,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "LBN",
+   "name": "黎巴嫩",
+   "population": 6855713,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "LBR",
+   "name": "利比里亚",
+   "population": 4937374,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "LBY",
+   "name": "利比亚",
+   "population": 6777452,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "LCA",
+   "name": "圣卢西亚",
+   "population": 182790,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "LIE",
+   "name": "列支敦士登",
+   "population": 38019,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "LKA",
+   "name": "斯里兰卡",
+   "population": 21803000,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "LSO",
+   "name": "莱索托",
+   "population": 2125268,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "LTU",
+   "name": "立陶宛",
+   "population": 2786844,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "cold",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "LUX",
+   "name": "卢森堡",
+   "population": 619896,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "LVA",
+   "name": "拉脱维亚",
+   "population": 1912789,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "cold",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "MAC",
+   "name": "中国澳门",
+   "population": 640445,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "MAF",
+   "name": "法属圣马丁",
+   "population": 38002,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "MAR",
+   "name": "摩洛哥",
+   "population": 36471769,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MCO",
+   "name": "摩纳哥",
+   "population": 38964,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "MDA",
+   "name": "摩尔多瓦",
+   "population": 2657637,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MDG",
+   "name": "马达加斯加",
+   "population": 26969307,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MDV",
+   "name": "马尔代夫",
+   "population": 530953,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "MEX",
+   "name": "墨西哥",
+   "population": 127575529,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "MHL",
+   "name": "马绍尔群岛",
+   "population": 58791,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MKD",
+   "name": "北马其顿",
+   "population": 2083459,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "MLI",
+   "name": "马里",
+   "population": 19658031,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MLT",
+   "name": "马耳他",
+   "population": 502653,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "MMR",
+   "name": "缅甸",
+   "population": 54045420,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MNE",
+   "name": "黑山",
+   "population": 622137,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "MNG",
+   "name": "蒙古国",
+   "population": 3225167,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MNP",
+   "name": "北马里亚纳群岛",
+   "population": 57216,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "MOZ",
+   "name": "莫桑比克",
+   "population": 30366036,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MRT",
+   "name": "毛里塔尼亚",
+   "population": 4525696,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MSR",
+   "name": "蒙特塞拉特",
+   "population": 4649,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MUS",
+   "name": "毛里求斯",
+   "population": 1265711,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "MWI",
+   "name": "马拉维",
+   "population": 18628747,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "MYS",
+   "name": "马来西亚",
+   "population": 31949777,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "NAM",
+   "name": "纳米比亚",
+   "population": 2494530,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "NCL",
+   "name": "新喀里多尼亚",
+   "population": 287800,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "NER",
+   "name": "尼日尔",
+   "population": 23310715,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "NFK",
+   "name": "诺福克岛",
+   "population": 2169,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "NGA",
+   "name": "尼日利亚",
+   "population": 200963599,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "NIC",
+   "name": "尼加拉瓜",
+   "population": 6545502,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "NIU",
+   "name": "纽埃",
+   "population": 1620,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "NLD",
+   "name": "荷兰",
+   "population": 17332850,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "NOR",
+   "name": "挪威",
+   "population": 5347896,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "NPL",
+   "name": "尼泊尔",
+   "population": 28608710,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "NRU",
+   "name": "瑙鲁",
+   "population": 12581,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "NZL",
+   "name": "新西兰",
+   "population": 4917000,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "OMN",
+   "name": "阿曼",
+   "population": 4974986,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "PAK",
+   "name": "巴基斯坦",
+   "population": 216565318,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "PAN",
+   "name": "巴拿马",
+   "population": 4246439,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "PER",
+   "name": "秘鲁",
+   "population": 32510453,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "PHL",
+   "name": "菲律宾",
+   "population": 108116615,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "PLW",
+   "name": "帕劳",
+   "population": 18008,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "PNG",
+   "name": "巴布亚新几内亚",
+   "population": 8776109,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "POL",
+   "name": "波兰",
+   "population": 37970874,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "PRI",
+   "name": "波多黎各",
+   "population": 3193694,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "PRK",
+   "name": "朝鲜",
+   "population": 25666161,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "PRT",
+   "name": "葡萄牙",
+   "population": 10269417,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "PRY",
+   "name": "巴拉圭",
+   "population": 7044636,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "PSX",
+   "name": "巴勒斯坦",
+   "population": 4685306,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "PYF",
+   "name": "法属波利尼西亚",
+   "population": 279287,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "QAT",
+   "name": "卡塔尔",
+   "population": 2832067,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "ROU",
+   "name": "罗马尼亚",
+   "population": 19356544,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "cold",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "RUS",
+   "name": "俄罗斯",
+   "population": 144373535,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "cold",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "RWA",
+   "name": "卢旺达",
+   "population": 12626950,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SAH",
+   "name": "西撒哈拉",
+   "population": 603253,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SAU",
+   "name": "沙特阿拉伯",
+   "population": 34268528,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "SDN",
+   "name": "苏丹",
+   "population": 42813238,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SDS",
+   "name": "南苏丹",
+   "population": 11062113,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SEN",
+   "name": "塞内加尔",
+   "population": 16296364,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SGP",
+   "name": "新加坡",
+   "population": 5703569,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "SHN",
+   "name": "圣赫勒拿",
+   "population": 4534,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SLB",
+   "name": "所罗门群岛",
+   "population": 669823,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SLE",
+   "name": "塞拉利昂",
+   "population": 7813215,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SLV",
+   "name": "萨尔瓦多",
+   "population": 6453553,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SMR",
+   "name": "圣马力诺",
+   "population": 33860,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "SOM",
+   "name": "索马里",
+   "population": 10192317,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SPM",
+   "name": "圣皮埃尔和密克隆",
+   "population": 5997,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "cold",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "SRB",
+   "name": "塞尔维亚",
+   "population": 6944975,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "STP",
+   "name": "圣多美和普林西比",
+   "population": 215056,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SUR",
+   "name": "苏里南",
+   "population": 581363,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "SVK",
+   "name": "斯洛伐克",
+   "population": 5454073,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "SVN",
+   "name": "斯洛文尼亚",
+   "population": 2087946,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "SWE",
+   "name": "瑞典",
+   "population": 10285453,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "SWZ",
+   "name": "斯威士兰",
+   "population": 1148130,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "SXM",
+   "name": "荷属圣马丁",
+   "population": 40733,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "SYC",
+   "name": "塞舌尔",
+   "population": 97625,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "SYR",
+   "name": "叙利亚",
+   "population": 17070135,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "TCA",
+   "name": "特克斯和凯科斯群岛",
+   "population": 38191,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "TCD",
+   "name": "乍得",
+   "population": 15946876,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "TGO",
+   "name": "多哥",
+   "population": 8082366,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "THA",
+   "name": "泰国",
+   "population": 69625582,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "TJK",
+   "name": "塔吉克斯坦",
+   "population": 9321018,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "TKM",
+   "name": "土库曼斯坦",
+   "population": 5942089,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "TLS",
+   "name": "东帝汶",
+   "population": 1293119,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "TON",
+   "name": "汤加",
+   "population": 104494,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "TTO",
+   "name": "特立尼达和多巴哥",
+   "population": 1394973,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "TUN",
+   "name": "突尼斯",
+   "population": 11694719,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "TUR",
+   "name": "土耳其",
+   "population": 83429615,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "TUV",
+   "name": "图瓦卢",
+   "population": 11646,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "TZA",
+   "name": "坦桑尼亚",
+   "population": 58005463,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "UGA",
+   "name": "乌干达",
+   "population": 44269594,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "UKR",
+   "name": "乌克兰",
+   "population": 44385155,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "URY",
+   "name": "乌拉圭",
+   "population": 3461734,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "USA",
+   "name": "美国",
+   "population": 328239523,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "UZB",
+   "name": "乌兹别克斯坦",
+   "population": 33580650,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "VCT",
+   "name": "圣文森特和格林纳丁斯",
+   "population": 110589,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "VEN",
+   "name": "委内瑞拉",
+   "population": 28515829,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "VGB",
+   "name": "英属维尔京群岛",
+   "population": 30030,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "VIR",
+   "name": "美属维尔京群岛",
+   "population": 106631,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "VNM",
+   "name": "越南",
+   "population": 96462106,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "VUT",
+   "name": "瓦努阿图",
+   "population": 299882,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "WLF",
+   "name": "瓦利斯和富图纳",
+   "population": 11558,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "WSB",
+   "name": "阿克罗蒂里主权基地区",
+   "population": 7850,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   }
+  },
+  {
+   "id": "WSM",
+   "name": "萨摩亚",
+   "population": 197097,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "YEM",
+   "name": "也门",
+   "population": 29161922,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "ZAF",
+   "name": "南非",
+   "population": 58558270,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   }
+  },
+  {
+   "id": "ZMB",
+   "name": "赞比亚",
+   "population": 17861030,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  },
+  {
+   "id": "ZWE",
+   "name": "津巴布韦",
+   "population": 14645468,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   }
+  }
+ ],
+ "links": [
+  {
+   "a": "AFG",
+   "b": "CHN",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "AFG",
+   "b": "IRN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AFG",
+   "b": "PAK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AFG",
+   "b": "TJK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AFG",
+   "b": "TKM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AFG",
+   "b": "UZB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AGO",
+   "b": "COD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AGO",
+   "b": "COG",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AGO",
+   "b": "NAM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AGO",
+   "b": "ZMB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ALB",
+   "b": "GRC",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ALB",
+   "b": "MKD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ALB",
+   "b": "MNE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ALB",
+   "b": "SRB",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "AND",
+   "b": "ESP",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "AND",
+   "b": "FRA",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "ARE",
+   "b": "OMN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARE",
+   "b": "SAU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARG",
+   "b": "BOL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARG",
+   "b": "BRA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARG",
+   "b": "CHL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARG",
+   "b": "PRY",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARG",
+   "b": "URY",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARM",
+   "b": "AZE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARM",
+   "b": "GEO",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ARM",
+   "b": "IRN",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "ARM",
+   "b": "TUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AUT",
+   "b": "CHE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AUT",
+   "b": "CZE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AUT",
+   "b": "DEU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AUT",
+   "b": "HUN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AUT",
+   "b": "ITA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AUT",
+   "b": "LIE",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "AUT",
+   "b": "SVK",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "AUT",
+   "b": "SVN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AZE",
+   "b": "GEO",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AZE",
+   "b": "IRN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AZE",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "AZE",
+   "b": "TUR",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "BDI",
+   "b": "COD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BDI",
+   "b": "RWA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BDI",
+   "b": "TZA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BEL",
+   "b": "DEU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BEL",
+   "b": "FRA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BEL",
+   "b": "LUX",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BEL",
+   "b": "NLD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BEN",
+   "b": "BFA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BEN",
+   "b": "NER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BEN",
+   "b": "NGA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BEN",
+   "b": "TGO",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BFA",
+   "b": "CIV",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BFA",
+   "b": "GHA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BFA",
+   "b": "MLI",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BFA",
+   "b": "NER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BFA",
+   "b": "TGO",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BGD",
+   "b": "IND",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BGD",
+   "b": "MMR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BGR",
+   "b": "GRC",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BGR",
+   "b": "MKD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BGR",
+   "b": "ROU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BGR",
+   "b": "SRB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BGR",
+   "b": "TUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BIH",
+   "b": "HRV",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BIH",
+   "b": "MNE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BIH",
+   "b": "SRB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BLR",
+   "b": "LTU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BLR",
+   "b": "LVA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BLR",
+   "b": "POL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BLR",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BLR",
+   "b": "UKR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BLZ",
+   "b": "GTM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BLZ",
+   "b": "MEX",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BOL",
+   "b": "BRA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BOL",
+   "b": "CHL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BOL",
+   "b": "PER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BOL",
+   "b": "PRY",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRA",
+   "b": "COL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRA",
+   "b": "FRA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRA",
+   "b": "GUY",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRA",
+   "b": "PER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRA",
+   "b": "PRY",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRA",
+   "b": "SUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRA",
+   "b": "URY",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRA",
+   "b": "VEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BRN",
+   "b": "MYS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BTN",
+   "b": "CHN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BTN",
+   "b": "IND",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BWA",
+   "b": "NAM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BWA",
+   "b": "ZAF",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "BWA",
+   "b": "ZMB",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "BWA",
+   "b": "ZWE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CAF",
+   "b": "CMR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CAF",
+   "b": "COD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CAF",
+   "b": "COG",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CAF",
+   "b": "SDN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CAF",
+   "b": "SDS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CAF",
+   "b": "TCD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CAN",
+   "b": "USA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHE",
+   "b": "DEU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHE",
+   "b": "FRA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHE",
+   "b": "ITA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHE",
+   "b": "LIE",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "CHL",
+   "b": "PER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "HKG",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "CHN",
+   "b": "IND",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "KAZ",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "KGZ",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "LAO",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "MAC",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "CHN",
+   "b": "MMR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "MNG",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "NPL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "PAK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "PRK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "TJK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CHN",
+   "b": "VNM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CIV",
+   "b": "GHA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CIV",
+   "b": "GIN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CIV",
+   "b": "LBR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CIV",
+   "b": "MLI",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CMR",
+   "b": "COG",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CMR",
+   "b": "GAB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CMR",
+   "b": "GNQ",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CMR",
+   "b": "NGA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CMR",
+   "b": "TCD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COD",
+   "b": "COG",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COD",
+   "b": "RWA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COD",
+   "b": "SDS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COD",
+   "b": "TZA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COD",
+   "b": "UGA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COD",
+   "b": "ZMB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COG",
+   "b": "GAB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COL",
+   "b": "ECU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COL",
+   "b": "PAN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COL",
+   "b": "PER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "COL",
+   "b": "VEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CRI",
+   "b": "NIC",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CRI",
+   "b": "PAN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CYP",
+   "b": "ESB",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "CYP",
+   "b": "WSB",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "CZE",
+   "b": "DEU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CZE",
+   "b": "POL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "CZE",
+   "b": "SVK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DEU",
+   "b": "DNK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DEU",
+   "b": "FRA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DEU",
+   "b": "LUX",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "DEU",
+   "b": "NLD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DEU",
+   "b": "POL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DJI",
+   "b": "ERI",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DJI",
+   "b": "ETH",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DJI",
+   "b": "SOM",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "DOM",
+   "b": "HTI",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DZA",
+   "b": "LBY",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DZA",
+   "b": "MAR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DZA",
+   "b": "MLI",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DZA",
+   "b": "MRT",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DZA",
+   "b": "NER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "DZA",
+   "b": "SAH",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "DZA",
+   "b": "TUN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ECU",
+   "b": "PER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "EGY",
+   "b": "ISR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "EGY",
+   "b": "LBY",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "EGY",
+   "b": "PSX",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "EGY",
+   "b": "SDN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ERI",
+   "b": "ETH",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ERI",
+   "b": "SDN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ESP",
+   "b": "FRA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ESP",
+   "b": "GIB",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "ESP",
+   "b": "MAR",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "ESP",
+   "b": "PRT",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "EST",
+   "b": "LVA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "EST",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ETH",
+   "b": "KEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ETH",
+   "b": "SDN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ETH",
+   "b": "SDS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ETH",
+   "b": "SOM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "FIN",
+   "b": "NOR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "FIN",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "FIN",
+   "b": "SWE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "FRA",
+   "b": "ITA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "FRA",
+   "b": "LUX",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "FRA",
+   "b": "MCO",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "FRA",
+   "b": "SUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GAB",
+   "b": "GNQ",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GBR",
+   "b": "IRL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GEO",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GEO",
+   "b": "TUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GHA",
+   "b": "TGO",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GIN",
+   "b": "GNB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GIN",
+   "b": "LBR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GIN",
+   "b": "MLI",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GIN",
+   "b": "SEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GIN",
+   "b": "SLE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GMB",
+   "b": "SEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GNB",
+   "b": "SEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GRC",
+   "b": "MKD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GRC",
+   "b": "TUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GTM",
+   "b": "HND",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GTM",
+   "b": "MEX",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GTM",
+   "b": "SLV",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GUY",
+   "b": "SUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "GUY",
+   "b": "VEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HND",
+   "b": "NIC",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HND",
+   "b": "SLV",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HRV",
+   "b": "HUN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HRV",
+   "b": "MNE",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "HRV",
+   "b": "SRB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HRV",
+   "b": "SVN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HUN",
+   "b": "ROU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HUN",
+   "b": "SRB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HUN",
+   "b": "SVK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "HUN",
+   "b": "SVN",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "HUN",
+   "b": "UKR",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "IDN",
+   "b": "MYS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IDN",
+   "b": "PNG",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IDN",
+   "b": "TLS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IND",
+   "b": "MMR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IND",
+   "b": "NPL",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IND",
+   "b": "PAK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRN",
+   "b": "IRQ",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRN",
+   "b": "PAK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRN",
+   "b": "TKM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRN",
+   "b": "TUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRQ",
+   "b": "JOR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRQ",
+   "b": "KWT",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRQ",
+   "b": "SAU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRQ",
+   "b": "SYR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "IRQ",
+   "b": "TUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ISR",
+   "b": "JOR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ISR",
+   "b": "LBN",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "ISR",
+   "b": "PSX",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ISR",
+   "b": "SYR",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "ITA",
+   "b": "SMR",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "ITA",
+   "b": "SVN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "JOR",
+   "b": "PSX",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "JOR",
+   "b": "SAU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "JOR",
+   "b": "SYR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KAZ",
+   "b": "KGZ",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KAZ",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KAZ",
+   "b": "TKM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KAZ",
+   "b": "UZB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KEN",
+   "b": "SDS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KEN",
+   "b": "SOM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KEN",
+   "b": "TZA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KEN",
+   "b": "UGA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KGZ",
+   "b": "TJK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KGZ",
+   "b": "UZB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KHM",
+   "b": "LAO",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KHM",
+   "b": "THA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KHM",
+   "b": "VNM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KOR",
+   "b": "PRK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "KWT",
+   "b": "SAU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LAO",
+   "b": "MMR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LAO",
+   "b": "THA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LAO",
+   "b": "VNM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LBN",
+   "b": "SYR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LBR",
+   "b": "SLE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LBY",
+   "b": "NER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LBY",
+   "b": "SDN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LBY",
+   "b": "TCD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LBY",
+   "b": "TUN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LSO",
+   "b": "ZAF",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LTU",
+   "b": "LVA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LTU",
+   "b": "POL",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "LTU",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "LVA",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MAF",
+   "b": "SXM",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "MAR",
+   "b": "SAH",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MDA",
+   "b": "ROU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MDA",
+   "b": "UKR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MEX",
+   "b": "USA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MKD",
+   "b": "SRB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MLI",
+   "b": "MRT",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MLI",
+   "b": "NER",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MLI",
+   "b": "SEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MMR",
+   "b": "THA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MNE",
+   "b": "SRB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MNG",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MOZ",
+   "b": "MWI",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MOZ",
+   "b": "SWZ",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "MOZ",
+   "b": "TZA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MOZ",
+   "b": "ZAF",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MOZ",
+   "b": "ZMB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MOZ",
+   "b": "ZWE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MRT",
+   "b": "SAH",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MRT",
+   "b": "SEN",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MWI",
+   "b": "TZA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MWI",
+   "b": "ZMB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "MYS",
+   "b": "SGP",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "MYS",
+   "b": "THA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "NAM",
+   "b": "ZAF",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "NAM",
+   "b": "ZMB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "NER",
+   "b": "NGA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "NER",
+   "b": "TCD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "NGA",
+   "b": "TCD",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "NOR",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "NOR",
+   "b": "SWE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "OMN",
+   "b": "SAU",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "OMN",
+   "b": "YEM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "POL",
+   "b": "RUS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "POL",
+   "b": "SVK",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "POL",
+   "b": "UKR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "PRK",
+   "b": "RUS",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "QAT",
+   "b": "SAU",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "ROU",
+   "b": "SRB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ROU",
+   "b": "UKR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "RUS",
+   "b": "UKR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "RWA",
+   "b": "TZA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "RWA",
+   "b": "UGA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "SAU",
+   "b": "YEM",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "SDN",
+   "b": "SDS",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "SDN",
+   "b": "TCD",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "SDS",
+   "b": "UGA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "SVK",
+   "b": "UKR",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "SWZ",
+   "b": "ZAF",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "SYR",
+   "b": "TUR",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "TJK",
+   "b": "UZB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "TKM",
+   "b": "UZB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "TZA",
+   "b": "UGA",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "TZA",
+   "b": "ZMB",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ZAF",
+   "b": "ZWE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ZMB",
+   "b": "ZWE",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "ABW",
+   "b": "COL",
+   "type": "sea",
+   "weight": 0.89
+  },
+  {
+   "a": "ABW",
+   "b": "CUW",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "ABW",
+   "b": "NLD",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "ABW",
+   "b": "VEN",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "AGO",
+   "b": "GAB",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "AIA",
+   "b": "BLM",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "AIA",
+   "b": "MAF",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "AIA",
+   "b": "NLD",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "AIA",
+   "b": "PRI",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "AIA",
+   "b": "SXM",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "AIA",
+   "b": "VGB",
+   "type": "sea",
+   "weight": 0.91
+  },
+  {
+   "a": "AIA",
+   "b": "VIR",
+   "type": "sea",
+   "weight": 0.89
+  },
+  {
+   "a": "ALB",
+   "b": "BIH",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "ALB",
+   "b": "HRV",
+   "type": "sea",
+   "weight": 0.91
+  },
+  {
+   "a": "ALB",
+   "b": "ITA",
+   "type": "sea",
+   "weight": 0.93
+  },
+  {
+   "a": "ALD",
+   "b": "EST",
+   "type": "sea",
+   "weight": 0.89
+  },
+  {
+   "a": "ALD",
+   "b": "FIN",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "ALD",
+   "b": "LVA",
+   "type": "sea",
+   "weight": 0.78
+  },
+  {
+   "a": "ALD",
+   "b": "SWE",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "ARE",
+   "b": "BHR",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "ARE",
+   "b": "IRN",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "ARE",
+   "b": "PAK",
+   "type": "sea",
+   "weight": 0.55
+  },
+  {
+   "a": "ARE",
+   "b": "QAT",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "ARG",
+   "b": "FLK",
+   "type": "sea",
+   "weight": 0.7
+  },
+  {
+   "a": "ASM",
+   "b": "COK",
+   "type": "sea",
+   "weight": 0.59
+  },
+  {
+   "a": "ASM",
+   "b": "NIU",
+   "type": "sea",
+   "weight": 0.55
+  },
+  {
+   "a": "ASM",
+   "b": "NZL",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "ASM",
+   "b": "WSM",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "ATG",
+   "b": "DMA",
+   "type": "sea",
+   "weight": 0.86
+  },
+  {
+   "a": "ATG",
+   "b": "FRA",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "ATG",
+   "b": "KNA",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "ATG",
+   "b": "MSR",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "ATG",
+   "b": "NLD",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "AUS",
+   "b": "IDN",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "AUS",
+   "b": "NZL",
+   "type": "sea",
+   "weight": 0.46
+  },
+  {
+   "a": "AUS",
+   "b": "PNG",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "AUS",
+   "b": "TLS",
+   "type": "sea",
+   "weight": 0.61
+  },
+  {
+   "a": "AZE",
+   "b": "KAZ",
+   "type": "sea",
+   "weight": 0.8
+  },
+  {
+   "a": "AZE",
+   "b": "TKM",
+   "type": "sea",
+   "weight": 0.84
+  },
+  {
+   "a": "BEL",
+   "b": "GBR",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "BEL",
+   "b": "GGY",
+   "type": "sea",
+   "weight": 0.67
+  },
+  {
+   "a": "BEL",
+   "b": "JEY",
+   "type": "sea",
+   "weight": 0.65
+  },
+  {
+   "a": "BEN",
+   "b": "CIV",
+   "type": "sea",
+   "weight": 0.54
+  },
+  {
+   "a": "BEN",
+   "b": "GHA",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "BGR",
+   "b": "UKR",
+   "type": "sea",
+   "weight": 0.82
+  },
+  {
+   "a": "BHR",
+   "b": "IRN",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "BHR",
+   "b": "IRQ",
+   "type": "sea",
+   "weight": 0.61
+  },
+  {
+   "a": "BHR",
+   "b": "KWT",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "BHR",
+   "b": "QAT",
+   "type": "sea",
+   "weight": 1.0
+  },
+  {
+   "a": "BHR",
+   "b": "SAU",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "BHS",
+   "b": "CUB",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "BHS",
+   "b": "DOM",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "BHS",
+   "b": "HTI",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "BHS",
+   "b": "TCA",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "BHS",
+   "b": "USA",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "BIH",
+   "b": "ITA",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "BIH",
+   "b": "SVN",
+   "type": "sea",
+   "weight": 0.59
+  },
+  {
+   "a": "BLM",
+   "b": "KNA",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "BLM",
+   "b": "MAF",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "BLM",
+   "b": "NLD",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "BLM",
+   "b": "SXM",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "BLZ",
+   "b": "HND",
+   "type": "sea",
+   "weight": 0.93
+  },
+  {
+   "a": "BLZ",
+   "b": "SLV",
+   "type": "sea",
+   "weight": 0.76
+  },
+  {
+   "a": "BMU",
+   "b": "USA",
+   "type": "sea",
+   "weight": 0.3
+  },
+  {
+   "a": "BRB",
+   "b": "FRA",
+   "type": "sea",
+   "weight": 0.84
+  },
+  {
+   "a": "BRB",
+   "b": "GRD",
+   "type": "sea",
+   "weight": 0.82
+  },
+  {
+   "a": "BRB",
+   "b": "LCA",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "BRB",
+   "b": "VCT",
+   "type": "sea",
+   "weight": 0.86
+  },
+  {
+   "a": "BRN",
+   "b": "CHN",
+   "type": "sea",
+   "weight": 0.55
+  },
+  {
+   "a": "BRN",
+   "b": "IDN",
+   "type": "sea",
+   "weight": 0.77
+  },
+  {
+   "a": "BRN",
+   "b": "PHL",
+   "type": "sea",
+   "weight": 0.68
+  },
+  {
+   "a": "CAN",
+   "b": "GRL",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "CAN",
+   "b": "SPM",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "CHL",
+   "b": "FLK",
+   "type": "sea",
+   "weight": 0.57
+  },
+  {
+   "a": "CHN",
+   "b": "JPN",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "CHN",
+   "b": "KOR",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "CHN",
+   "b": "PHL",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "CIV",
+   "b": "SLE",
+   "type": "sea",
+   "weight": 0.54
+  },
+  {
+   "a": "CIV",
+   "b": "TGO",
+   "type": "sea",
+   "weight": 0.57
+  },
+  {
+   "a": "CMR",
+   "b": "STP",
+   "type": "sea",
+   "weight": 0.76
+  },
+  {
+   "a": "COD",
+   "b": "GAB",
+   "type": "sea",
+   "weight": 0.78
+  },
+  {
+   "a": "COG",
+   "b": "GNQ",
+   "type": "sea",
+   "weight": 0.5
+  },
+  {
+   "a": "COK",
+   "b": "KIR",
+   "type": "sea",
+   "weight": 0.63
+  },
+  {
+   "a": "COK",
+   "b": "NZL",
+   "type": "sea",
+   "weight": 0.48
+  },
+  {
+   "a": "COK",
+   "b": "PYF",
+   "type": "sea",
+   "weight": 0.56
+  },
+  {
+   "a": "COL",
+   "b": "CRI",
+   "type": "sea",
+   "weight": 0.77
+  },
+  {
+   "a": "COL",
+   "b": "CUW",
+   "type": "sea",
+   "weight": 0.81
+  },
+  {
+   "a": "COL",
+   "b": "CYM",
+   "type": "sea",
+   "weight": 0.65
+  },
+  {
+   "a": "COL",
+   "b": "JAM",
+   "type": "sea",
+   "weight": 0.79
+  },
+  {
+   "a": "COL",
+   "b": "NIC",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "COM",
+   "b": "FRA",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "COM",
+   "b": "MDG",
+   "type": "sea",
+   "weight": 0.66
+  },
+  {
+   "a": "COM",
+   "b": "MOZ",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "COM",
+   "b": "SYC",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "COM",
+   "b": "TZA",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "CPV",
+   "b": "MRT",
+   "type": "sea",
+   "weight": 0.44
+  },
+  {
+   "a": "CPV",
+   "b": "SEN",
+   "type": "sea",
+   "weight": 0.49
+  },
+  {
+   "a": "CRI",
+   "b": "ECU",
+   "type": "sea",
+   "weight": 0.42
+  },
+  {
+   "a": "CRI",
+   "b": "HND",
+   "type": "sea",
+   "weight": 0.76
+  },
+  {
+   "a": "CUB",
+   "b": "CYM",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "CUB",
+   "b": "HTI",
+   "type": "sea",
+   "weight": 0.93
+  },
+  {
+   "a": "CUB",
+   "b": "JAM",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "CUB",
+   "b": "MEX",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "CUB",
+   "b": "TCA",
+   "type": "sea",
+   "weight": 0.79
+  },
+  {
+   "a": "CUW",
+   "b": "NLD",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "CUW",
+   "b": "VEN",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "CYM",
+   "b": "HND",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "CYM",
+   "b": "JAM",
+   "type": "sea",
+   "weight": 0.81
+  },
+  {
+   "a": "CYP",
+   "b": "LBN",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "CYP",
+   "b": "SYR",
+   "type": "sea",
+   "weight": 0.91
+  },
+  {
+   "a": "CYP",
+   "b": "TUR",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "DEU",
+   "b": "SWE",
+   "type": "sea",
+   "weight": 0.93
+  },
+  {
+   "a": "DJI",
+   "b": "SAU",
+   "type": "sea",
+   "weight": 0.64
+  },
+  {
+   "a": "DJI",
+   "b": "YEM",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "DMA",
+   "b": "FRA",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "DMA",
+   "b": "LCA",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "DMA",
+   "b": "MSR",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "DNK",
+   "b": "NOR",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "DNK",
+   "b": "POL",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "DNK",
+   "b": "SWE",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "DOM",
+   "b": "PRI",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "DOM",
+   "b": "TCA",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "DZA",
+   "b": "ESP",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "DZA",
+   "b": "GIB",
+   "type": "sea",
+   "weight": 0.74
+  },
+  {
+   "a": "DZA",
+   "b": "ITA",
+   "type": "sea",
+   "weight": 0.82
+  },
+  {
+   "a": "DZA",
+   "b": "MLT",
+   "type": "sea",
+   "weight": 0.56
+  },
+  {
+   "a": "ECU",
+   "b": "PAN",
+   "type": "sea",
+   "weight": 0.43
+  },
+  {
+   "a": "EGY",
+   "b": "JOR",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "EGY",
+   "b": "SAU",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "ERI",
+   "b": "SOM",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "ERI",
+   "b": "YEM",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "ESB",
+   "b": "LBN",
+   "type": "sea",
+   "weight": 0.84
+  },
+  {
+   "a": "ESB",
+   "b": "SYR",
+   "type": "sea",
+   "weight": 0.84
+  },
+  {
+   "a": "ESB",
+   "b": "TUR",
+   "type": "sea",
+   "weight": 0.89
+  },
+  {
+   "a": "ESB",
+   "b": "WSB",
+   "type": "sea",
+   "weight": 0.93
+  },
+  {
+   "a": "ESP",
+   "b": "MCO",
+   "type": "sea",
+   "weight": 0.68
+  },
+  {
+   "a": "ESP",
+   "b": "SAH",
+   "type": "sea",
+   "weight": 0.91
+  },
+  {
+   "a": "EST",
+   "b": "FIN",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "FJI",
+   "b": "NCL",
+   "type": "sea",
+   "weight": 0.7
+  },
+  {
+   "a": "FJI",
+   "b": "TON",
+   "type": "sea",
+   "weight": 0.73
+  },
+  {
+   "a": "FJI",
+   "b": "TUV",
+   "type": "sea",
+   "weight": 0.61
+  },
+  {
+   "a": "FJI",
+   "b": "VUT",
+   "type": "sea",
+   "weight": 0.55
+  },
+  {
+   "a": "FJI",
+   "b": "WLF",
+   "type": "sea",
+   "weight": 0.76
+  },
+  {
+   "a": "FRA",
+   "b": "GBR",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "FRA",
+   "b": "GGY",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "FRA",
+   "b": "GUY",
+   "type": "sea",
+   "weight": 0.7
+  },
+  {
+   "a": "FRA",
+   "b": "IMN",
+   "type": "sea",
+   "weight": 0.55
+  },
+  {
+   "a": "FRA",
+   "b": "IRL",
+   "type": "sea",
+   "weight": 0.65
+  },
+  {
+   "a": "FRA",
+   "b": "JEY",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "FRA",
+   "b": "LCA",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "FRA",
+   "b": "MDG",
+   "type": "sea",
+   "weight": 0.74
+  },
+  {
+   "a": "FRA",
+   "b": "MSR",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "FRA",
+   "b": "MUS",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "FRA",
+   "b": "SVN",
+   "type": "sea",
+   "weight": 0.63
+  },
+  {
+   "a": "FRA",
+   "b": "SYC",
+   "type": "sea",
+   "weight": 0.7
+  },
+  {
+   "a": "FRA",
+   "b": "VCT",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "FRO",
+   "b": "GBR",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "FRO",
+   "b": "IRL",
+   "type": "sea",
+   "weight": 0.42
+  },
+  {
+   "a": "FRO",
+   "b": "ISL",
+   "type": "sea",
+   "weight": 0.63
+  },
+  {
+   "a": "FRO",
+   "b": "NOR",
+   "type": "sea",
+   "weight": 0.5
+  },
+  {
+   "a": "FSM",
+   "b": "GUM",
+   "type": "sea",
+   "weight": 0.48
+  },
+  {
+   "a": "FSM",
+   "b": "MHL",
+   "type": "sea",
+   "weight": 0.52
+  },
+  {
+   "a": "FSM",
+   "b": "MNP",
+   "type": "sea",
+   "weight": 0.4
+  },
+  {
+   "a": "FSM",
+   "b": "PLW",
+   "type": "sea",
+   "weight": 0.66
+  },
+  {
+   "a": "FSM",
+   "b": "PNG",
+   "type": "sea",
+   "weight": 0.6
+  },
+  {
+   "a": "GAB",
+   "b": "STP",
+   "type": "sea",
+   "weight": 0.8
+  },
+  {
+   "a": "GBR",
+   "b": "GGY",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "GBR",
+   "b": "IMN",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "GBR",
+   "b": "ISL",
+   "type": "sea",
+   "weight": 0.4
+  },
+  {
+   "a": "GBR",
+   "b": "JEY",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "GBR",
+   "b": "NOR",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "GEO",
+   "b": "UKR",
+   "type": "sea",
+   "weight": 0.7
+  },
+  {
+   "a": "GGY",
+   "b": "IMN",
+   "type": "sea",
+   "weight": 0.56
+  },
+  {
+   "a": "GGY",
+   "b": "IRL",
+   "type": "sea",
+   "weight": 0.66
+  },
+  {
+   "a": "GGY",
+   "b": "JEY",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "GHA",
+   "b": "LBR",
+   "type": "sea",
+   "weight": 0.58
+  },
+  {
+   "a": "GHA",
+   "b": "NGA",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "GIB",
+   "b": "MAR",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "GIB",
+   "b": "PRT",
+   "type": "sea",
+   "weight": 0.81
+  },
+  {
+   "a": "GIN",
+   "b": "GMB",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "GMB",
+   "b": "GNB",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "GMB",
+   "b": "MRT",
+   "type": "sea",
+   "weight": 0.77
+  },
+  {
+   "a": "GNB",
+   "b": "MRT",
+   "type": "sea",
+   "weight": 0.65
+  },
+  {
+   "a": "GNB",
+   "b": "SLE",
+   "type": "sea",
+   "weight": 0.73
+  },
+  {
+   "a": "GNQ",
+   "b": "NGA",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "GNQ",
+   "b": "STP",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "GRC",
+   "b": "ITA",
+   "type": "sea",
+   "weight": 0.91
+  },
+  {
+   "a": "GRC",
+   "b": "LBY",
+   "type": "sea",
+   "weight": 0.78
+  },
+  {
+   "a": "GRC",
+   "b": "ROU",
+   "type": "sea",
+   "weight": 0.67
+  },
+  {
+   "a": "GRD",
+   "b": "LCA",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "GRD",
+   "b": "TTO",
+   "type": "sea",
+   "weight": 0.89
+  },
+  {
+   "a": "GRD",
+   "b": "VCT",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "GRD",
+   "b": "VEN",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "GRL",
+   "b": "ISL",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "GRL",
+   "b": "NOR",
+   "type": "sea",
+   "weight": 0.62
+  },
+  {
+   "a": "GUM",
+   "b": "MNP",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "GUY",
+   "b": "TTO",
+   "type": "sea",
+   "weight": 0.82
+  },
+  {
+   "a": "HKG",
+   "b": "MAC",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "HKG",
+   "b": "VNM",
+   "type": "sea",
+   "weight": 0.47
+  },
+  {
+   "a": "HRV",
+   "b": "ITA",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "HRV",
+   "b": "MCO",
+   "type": "sea",
+   "weight": 0.56
+  },
+  {
+   "a": "HTI",
+   "b": "JAM",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "HTI",
+   "b": "TCA",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "IDN",
+   "b": "IOA",
+   "type": "sea",
+   "weight": 0.7
+  },
+  {
+   "a": "IDN",
+   "b": "PHL",
+   "type": "sea",
+   "weight": 0.91
+  },
+  {
+   "a": "IDN",
+   "b": "PLW",
+   "type": "sea",
+   "weight": 0.81
+  },
+  {
+   "a": "IDN",
+   "b": "SGP",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "IMN",
+   "b": "IRL",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "IND",
+   "b": "LKA",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "IND",
+   "b": "MDV",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "IOT",
+   "b": "MDV",
+   "type": "sea",
+   "weight": 0.54
+  },
+  {
+   "a": "IRN",
+   "b": "KAZ",
+   "type": "sea",
+   "weight": 0.57
+  },
+  {
+   "a": "IRN",
+   "b": "KWT",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "IRN",
+   "b": "OMN",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "IRN",
+   "b": "QAT",
+   "type": "sea",
+   "weight": 0.84
+  },
+  {
+   "a": "ISL",
+   "b": "NOR",
+   "type": "sea",
+   "weight": 0.54
+  },
+  {
+   "a": "ITA",
+   "b": "LBY",
+   "type": "sea",
+   "weight": 0.76
+  },
+  {
+   "a": "ITA",
+   "b": "MCO",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "ITA",
+   "b": "MLT",
+   "type": "sea",
+   "weight": 0.93
+  },
+  {
+   "a": "ITA",
+   "b": "MNE",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "ITA",
+   "b": "TUN",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "JPN",
+   "b": "KOR",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "JPN",
+   "b": "MNP",
+   "type": "sea",
+   "weight": 0.54
+  },
+  {
+   "a": "JPN",
+   "b": "PHL",
+   "type": "sea",
+   "weight": 0.67
+  },
+  {
+   "a": "JPN",
+   "b": "PRK",
+   "type": "sea",
+   "weight": 0.62
+  },
+  {
+   "a": "JPN",
+   "b": "RUS",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "KEN",
+   "b": "MOZ",
+   "type": "sea",
+   "weight": 0.43
+  },
+  {
+   "a": "KHM",
+   "b": "MMR",
+   "type": "sea",
+   "weight": 0.62
+  },
+  {
+   "a": "KHM",
+   "b": "MYS",
+   "type": "sea",
+   "weight": 0.57
+  },
+  {
+   "a": "KIR",
+   "b": "MHL",
+   "type": "sea",
+   "weight": 0.7
+  },
+  {
+   "a": "KIR",
+   "b": "NRU",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "KIR",
+   "b": "NZL",
+   "type": "sea",
+   "weight": 0.62
+  },
+  {
+   "a": "KIR",
+   "b": "PYF",
+   "type": "sea",
+   "weight": 0.56
+  },
+  {
+   "a": "KIR",
+   "b": "TUV",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "KNA",
+   "b": "MSR",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "KNA",
+   "b": "NLD",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "KOR",
+   "b": "RUS",
+   "type": "sea",
+   "weight": 0.6
+  },
+  {
+   "a": "LBN",
+   "b": "PSX",
+   "type": "sea",
+   "weight": 0.84
+  },
+  {
+   "a": "LBN",
+   "b": "TUR",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "LBN",
+   "b": "WSB",
+   "type": "sea",
+   "weight": 0.78
+  },
+  {
+   "a": "LBR",
+   "b": "SHN",
+   "type": "sea",
+   "weight": 0.3
+  },
+  {
+   "a": "LBY",
+   "b": "MLT",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "LCA",
+   "b": "VCT",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "LTU",
+   "b": "SWE",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "LVA",
+   "b": "SWE",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "MAC",
+   "b": "VNM",
+   "type": "sea",
+   "weight": 0.51
+  },
+  {
+   "a": "MAF",
+   "b": "NLD",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "MAR",
+   "b": "PRT",
+   "type": "sea",
+   "weight": 0.82
+  },
+  {
+   "a": "MDG",
+   "b": "MOZ",
+   "type": "sea",
+   "weight": 0.64
+  },
+  {
+   "a": "MDG",
+   "b": "SYC",
+   "type": "sea",
+   "weight": 0.73
+  },
+  {
+   "a": "MEX",
+   "b": "SLV",
+   "type": "sea",
+   "weight": 0.78
+  },
+  {
+   "a": "MHL",
+   "b": "NRU",
+   "type": "sea",
+   "weight": 0.49
+  },
+  {
+   "a": "MLT",
+   "b": "TUN",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "MMR",
+   "b": "MYS",
+   "type": "sea",
+   "weight": 0.64
+  },
+  {
+   "a": "MSR",
+   "b": "NLD",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "MUS",
+   "b": "SYC",
+   "type": "sea",
+   "weight": 0.69
+  },
+  {
+   "a": "MYS",
+   "b": "PHL",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "MYS",
+   "b": "VNM",
+   "type": "sea",
+   "weight": 0.66
+  },
+  {
+   "a": "NCL",
+   "b": "VUT",
+   "type": "sea",
+   "weight": 0.81
+  },
+  {
+   "a": "NFK",
+   "b": "NZL",
+   "type": "sea",
+   "weight": 0.41
+  },
+  {
+   "a": "NGA",
+   "b": "STP",
+   "type": "sea",
+   "weight": 0.74
+  },
+  {
+   "a": "NGA",
+   "b": "TGO",
+   "type": "sea",
+   "weight": 0.89
+  },
+  {
+   "a": "NIC",
+   "b": "PAN",
+   "type": "sea",
+   "weight": 0.81
+  },
+  {
+   "a": "NIC",
+   "b": "SLV",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "NIU",
+   "b": "TON",
+   "type": "sea",
+   "weight": 0.64
+  },
+  {
+   "a": "NIU",
+   "b": "WSM",
+   "type": "sea",
+   "weight": 0.49
+  },
+  {
+   "a": "NLD",
+   "b": "SXM",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "NLD",
+   "b": "VIR",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "NZL",
+   "b": "WSM",
+   "type": "sea",
+   "weight": 0.59
+  },
+  {
+   "a": "OMN",
+   "b": "PAK",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "PAN",
+   "b": "VEN",
+   "type": "sea",
+   "weight": 0.48
+  },
+  {
+   "a": "PHL",
+   "b": "PLW",
+   "type": "sea",
+   "weight": 0.44
+  },
+  {
+   "a": "PNG",
+   "b": "SLB",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "PRI",
+   "b": "VGB",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "PRI",
+   "b": "VIR",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "PRT",
+   "b": "SAH",
+   "type": "sea",
+   "weight": 0.67
+  },
+  {
+   "a": "ROU",
+   "b": "TUR",
+   "type": "sea",
+   "weight": 0.82
+  },
+  {
+   "a": "RUS",
+   "b": "TKM",
+   "type": "sea",
+   "weight": 0.72
+  },
+  {
+   "a": "RUS",
+   "b": "USA",
+   "type": "sea",
+   "weight": 1.0
+  },
+  {
+   "a": "SAU",
+   "b": "SDN",
+   "type": "sea",
+   "weight": 0.84
+  },
+  {
+   "a": "SDN",
+   "b": "YEM",
+   "type": "sea",
+   "weight": 0.58
+  },
+  {
+   "a": "SGP",
+   "b": "THA",
+   "type": "sea",
+   "weight": 0.49
+  },
+  {
+   "a": "SLB",
+   "b": "VUT",
+   "type": "sea",
+   "weight": 0.86
+  },
+  {
+   "a": "SOM",
+   "b": "TZA",
+   "type": "sea",
+   "weight": 0.64
+  },
+  {
+   "a": "SOM",
+   "b": "YEM",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "SUR",
+   "b": "VEN",
+   "type": "sea",
+   "weight": 0.6
+  },
+  {
+   "a": "SXM",
+   "b": "VGB",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "THA",
+   "b": "VNM",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "TON",
+   "b": "WLF",
+   "type": "sea",
+   "weight": 0.77
+  },
+  {
+   "a": "TON",
+   "b": "WSM",
+   "type": "sea",
+   "weight": 0.67
+  },
+  {
+   "a": "TTO",
+   "b": "VCT",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "TTO",
+   "b": "VEN",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "TUR",
+   "b": "UKR",
+   "type": "sea",
+   "weight": 0.77
+  },
+  {
+   "a": "TUR",
+   "b": "WSB",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "TUV",
+   "b": "WLF",
+   "type": "sea",
+   "weight": 0.51
+  },
+  {
+   "a": "VGB",
+   "b": "VIR",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "WLF",
+   "b": "WSM",
+   "type": "sea",
+   "weight": 0.68
+  },
+  {
+   "a": "AFG",
+   "b": "IND",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AFG",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AGO",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AGO",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ALB",
+   "b": "CHE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ALB",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ARE",
+   "b": "IND",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ARE",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ARG",
+   "b": "BRA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ARG",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ARM",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ARM",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AUS",
+   "b": "CHN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "AUS",
+   "b": "FJI",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AUS",
+   "b": "IDN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "AUS",
+   "b": "IND",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "AUS",
+   "b": "JPN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "AUS",
+   "b": "KOR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "AUS",
+   "b": "NZL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AUS",
+   "b": "PNG",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AUS",
+   "b": "SLB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AUS",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "AUS",
+   "b": "TLS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AUT",
+   "b": "DEU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AUT",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AZE",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "AZE",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BDI",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BDI",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BEL",
+   "b": "CAN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "CHE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "DEU",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "FRA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "GBR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "IRL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BEL",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "LUX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BEL",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEL",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BEN",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BEN",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BFA",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BFA",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BGD",
+   "b": "IND",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BGD",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BGR",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BGR",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BHR",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BHR",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BIH",
+   "b": "CHE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BIH",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BLR",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BLR",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BOL",
+   "b": "BRA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BOL",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "CHL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "COL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "CPV",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "ECU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BRA",
+   "b": "FRA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BRA",
+   "b": "GBR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BRA",
+   "b": "GUY",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BRA",
+   "b": "PER",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "PRY",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "SUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "TTO",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "URY",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BRA",
+   "b": "USA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BRA",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "BRA",
+   "b": "ZAF",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BTN",
+   "b": "CHN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BTN",
+   "b": "IND",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BWA",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "BWA",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CAF",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CAF",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CAN",
+   "b": "GBR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CAN",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CAN",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CAN",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CAN",
+   "b": "USA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CAN",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "DEU",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "FRA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "GBR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "HRV",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHE",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "MLT",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHE",
+   "b": "MNE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHE",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHE",
+   "b": "SVN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHE",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHL",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHN",
+   "b": "HKG",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHN",
+   "b": "IDN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHN",
+   "b": "IND",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHN",
+   "b": "JPN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHN",
+   "b": "KOR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHN",
+   "b": "LAO",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHN",
+   "b": "MAC",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHN",
+   "b": "MMR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHN",
+   "b": "MNG",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHN",
+   "b": "NPL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CHN",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHN",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "CHN",
+   "b": "VNM",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CIV",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CIV",
+   "b": "FRA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CMR",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CMR",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "COD",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "COD",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "COG",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "COG",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "COL",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "COM",
+   "b": "IND",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "COM",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CPV",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CRI",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CRI",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CUB",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CUB",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CYP",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CYP",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CZE",
+   "b": "DEU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "CZE",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DEU",
+   "b": "DNK",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DEU",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DEU",
+   "b": "FRA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DEU",
+   "b": "GBR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DEU",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DEU",
+   "b": "LTU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DEU",
+   "b": "LUX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DEU",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DEU",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DEU",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DEU",
+   "b": "SVK",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DEU",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DEU",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "DJI",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DJI",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DNK",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DOM",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DOM",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DZA",
+   "b": "ESP",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "DZA",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ECU",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "EGY",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "EGY",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ERI",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ERI",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "FRA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "ESP",
+   "b": "GAB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "GHA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "GIN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "GMB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "GNB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "GNQ",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "ESP",
+   "b": "LBR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "MAR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "MLI",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "MRT",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "NER",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "NGA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "ESP",
+   "b": "PRT",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "SAH",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "SEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "SLE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "TGO",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "TUN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ESP",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "EST",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "EST",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ETH",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ETH",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FIN",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FIN",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FJI",
+   "b": "JPN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "GBR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "FRA",
+   "b": "GIN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "GMB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "GNB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "FRA",
+   "b": "LBR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "MAR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "MRT",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "FRA",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "FRA",
+   "b": "PRT",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "SAH",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "SEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "FRA",
+   "b": "SLE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GAB",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GBR",
+   "b": "IRL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GBR",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "GBR",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "GBR",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "GBR",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "GBR",
+   "b": "USA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "GBR",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "GEO",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GEO",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GHA",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GNQ",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GRC",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GRC",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GTM",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GTM",
+   "b": "USA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "GUY",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "HKG",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "HND",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "HND",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "HRV",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "HTI",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "HTI",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "HUN",
+   "b": "ITA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "HUN",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IDN",
+   "b": "IND",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IDN",
+   "b": "JPN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IDN",
+   "b": "KHM",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IDN",
+   "b": "KOR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IDN",
+   "b": "MDV",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IDN",
+   "b": "MUS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IDN",
+   "b": "MYS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IDN",
+   "b": "NZL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IDN",
+   "b": "PHL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IDN",
+   "b": "SGP",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IDN",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IDN",
+   "b": "TLS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "JPN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IND",
+   "b": "KGZ",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "KOR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IND",
+   "b": "LKA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "MDG",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "MDV",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "NPL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "OMN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "PAK",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IND",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IND",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IND",
+   "b": "TJK",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IND",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "IRN",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IRN",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IRQ",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "IRQ",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ISR",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ISR",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "LBY",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "MKD",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "MLI",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "MLT",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "MNE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "NER",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "NGA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "NLD",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "ITA",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "ITA",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "ITA",
+   "b": "SRB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "SVN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "TGO",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "TUN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ITA",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "JAM",
+   "b": "MEX",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "JAM",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "JOR",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "JOR",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "JPN",
+   "b": "KOR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "JPN",
+   "b": "PNG",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "JPN",
+   "b": "PRK",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "JPN",
+   "b": "SLB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "JPN",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "KAZ",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KAZ",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KEN",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KEN",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KGZ",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KHM",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KOR",
+   "b": "MNG",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KOR",
+   "b": "PRK",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KOR",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "KOR",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "KWT",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "KWT",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LAO",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LBN",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LBN",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LBY",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LKA",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LSO",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LSO",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LTU",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LVA",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "LVA",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MAC",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MDA",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MDA",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MDG",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MEX",
+   "b": "NIC",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MEX",
+   "b": "PAN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MEX",
+   "b": "PRI",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MEX",
+   "b": "SLV",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MEX",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "MEX",
+   "b": "USA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "MEX",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "MKD",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MMR",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MOZ",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MOZ",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MUS",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MWI",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MWI",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "MYS",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "NAM",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "NAM",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "NIC",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "NLD",
+   "b": "NOR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "NLD",
+   "b": "POL",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "NLD",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "NLD",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "NLD",
+   "b": "USA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "NOR",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "OMN",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "PAK",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "PAN",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "PER",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "PHL",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "POL",
+   "b": "ROU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "POL",
+   "b": "RUS",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "POL",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "POL",
+   "b": "SRB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "POL",
+   "b": "SVK",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "POL",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "POL",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "POL",
+   "b": "UKR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "PRI",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "PRY",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "PSX",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "PSX",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "QAT",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "QAT",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "ROU",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "RUS",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "RUS",
+   "b": "SWE",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "RUS",
+   "b": "TJK",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "RUS",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "RUS",
+   "b": "UZB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "RWA",
+   "b": "SAU",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "RWA",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "SDN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "SDS",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "SOM",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "SWZ",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "SYR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "TCD",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "TKM",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "SAU",
+   "b": "TZA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "UGA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "YEM",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "ZAF",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "ZMB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SAU",
+   "b": "ZWE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SDN",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SDS",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SGP",
+   "b": "THA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SLV",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SOM",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SUR",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SWE",
+   "b": "USA",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "SWZ",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "SYR",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TCD",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "THA",
+   "b": "VNM",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TKM",
+   "b": "TUR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TTO",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TUR",
+   "b": "TZA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TUR",
+   "b": "UGA",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TUR",
+   "b": "UKR",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TUR",
+   "b": "UZB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TUR",
+   "b": "YEM",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TUR",
+   "b": "ZMB",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "TUR",
+   "b": "ZWE",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "URY",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "USA",
+   "b": "VEN",
+   "type": "air",
+   "weight": 0.4
+  }
+ ]
+}
