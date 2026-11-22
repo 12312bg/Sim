@@ -1,0 +1,66 @@
+{
+  "id": "default",
+  "name": "原型世界",
+  "labels": {
+    "agent": "传播体",
+    "converted": "已转化",
+    "converted_verb": "转化",
+    "removed": "已移除",
+    "points": "点数",
+    "opposition": "反制研究"
+  },
+  "rules": {
+    "win_condition": "convert_all",
+    "seed_amount": 1,
+    "base_spread": 0.12,
+    "base_lethality": 0.0,
+    "base_visibility": 0.2,
+    "awareness_rate": 0.03,
+    "cross_base": 0.06,
+    "cross_presence_exponent": 1.5,
+    "closure_threshold": 0.6,
+    "closure_strength": 0.9,
+    "closure_types": ["air", "sea"],
+    "trait_resist": {
+      "climate": { "hot": 0.0, "temperate": 0.15, "cold": 0.35 },
+      "wealth": { "poor": 0.0, "mid": 0.2, "rich": 0.4 }
+    },
+    "opposition": { "start_awareness": 0.12, "base_rate": 0.006 },
+    "points": {
+      "start": 4,
+      "per_new_region": 2,
+      "convert_chunk": 60000000,
+      "bubble_chance": 0.08,
+      "bubble_value": 1
+    }
+  },
+  "regions": [
+    { "id": "north_reach",  "name": "北境",   "population": 38000000,  "counter_weight": 1.6, "traits": { "climate": "cold",      "wealth": "rich" } },
+    { "id": "iron_coast",   "name": "铁岸",   "population": 120000000, "counter_weight": 1.8, "traits": { "climate": "temperate", "wealth": "rich" } },
+    { "id": "midlands",     "name": "中原",   "population": 260000000, "counter_weight": 1.0, "traits": { "climate": "temperate", "wealth": "mid" } },
+    { "id": "steppe",       "name": "长草原", "population": 70000000,  "counter_weight": 0.6, "traits": { "climate": "cold",      "wealth": "poor" } },
+    { "id": "sunlands",     "name": "日照地", "population": 310000000, "counter_weight": 0.5, "traits": { "climate": "hot",       "wealth": "poor" } },
+    { "id": "jade_delta",   "name": "玉三角", "population": 450000000, "counter_weight": 1.1, "traits": { "climate": "hot",       "wealth": "mid" } },
+    { "id": "red_desert",   "name": "赤漠",   "population": 55000000,  "counter_weight": 0.7, "traits": { "climate": "hot",       "wealth": "mid" } },
+    { "id": "archipelago",  "name": "千岛",   "population": 180000000, "counter_weight": 0.8, "traits": { "climate": "hot",       "wealth": "poor" } },
+    { "id": "far_isles",    "name": "远洋岛", "population": 25000000,  "counter_weight": 1.5, "traits": { "climate": "temperate", "wealth": "rich" } },
+    { "id": "frost_cape",   "name": "霜角",   "population": 9000000,   "counter_weight": 1.2, "traits": { "climate": "cold",      "wealth": "rich" } }
+  ],
+  "links": [
+    { "a": "north_reach", "b": "iron_coast",  "type": "land", "weight": 1.0 },
+    { "a": "iron_coast",  "b": "midlands",    "type": "land", "weight": 1.0 },
+    { "a": "midlands",    "b": "steppe",      "type": "land", "weight": 0.8 },
+    { "a": "midlands",    "b": "red_desert",  "type": "land", "weight": 0.6 },
+    { "a": "red_desert",  "b": "sunlands",    "type": "land", "weight": 0.8 },
+    { "a": "steppe",      "b": "jade_delta",  "type": "land", "weight": 0.7 },
+    { "a": "jade_delta",  "b": "archipelago", "type": "sea",  "weight": 1.0 },
+    { "a": "sunlands",    "b": "archipelago", "type": "sea",  "weight": 0.6 },
+    { "a": "iron_coast",  "b": "far_isles",   "type": "sea",  "weight": 0.5 },
+    { "a": "north_reach", "b": "frost_cape",  "type": "sea",  "weight": 0.4 },
+    { "a": "iron_coast",  "b": "jade_delta",  "type": "air",  "weight": 0.6 },
+    { "a": "iron_coast",  "b": "sunlands",    "type": "air",  "weight": 0.4 },
+    { "a": "far_isles",   "b": "jade_delta",  "type": "air",  "weight": 0.5 },
+    { "a": "midlands",    "b": "archipelago", "type": "air",  "weight": 0.4 },
+    { "a": "far_isles",   "b": "frost_cape",  "type": "air",  "weight": 0.3 }
+  ]
+}
