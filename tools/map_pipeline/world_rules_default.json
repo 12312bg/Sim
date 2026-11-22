@@ -18,18 +18,34 @@
     "cross_presence_exponent": 1.5,
     "closure_threshold": 0.6,
     "closure_strength": 0.9,
-    "closure_types": ["air", "sea"],
+    "closure_types": [
+      "air",
+      "sea"
+    ],
     "trait_resist": {
-      "climate": { "hot": 0.0, "temperate": 0.15, "cold": 0.35 },
-      "wealth": { "poor": 0.0, "mid": 0.2, "rich": 0.4 }
+      "climate": {
+        "hot": 0.0,
+        "temperate": 0.15,
+        "cold": 0.35
+      },
+      "wealth": {
+        "poor": 0.0,
+        "mid": 0.2,
+        "rich": 0.4
+      }
     },
-    "opposition": { "start_awareness": 0.12, "base_rate": 0.006 },
+    "opposition": {
+      "start_awareness": 0.12,
+      "base_rate": 0.006
+    },
     "points": {
       "start": 4,
       "per_new_region": 1,
-      "convert_chunk": 250000000,
-      "bubble_chance": 0.08,
-      "bubble_value": 1
+      "convert_chunk_ratio": 0.033
+    },
+    "bubbles": {
+      "lifetime_seconds": 8,
+      "max": 8
     }
   }
 }

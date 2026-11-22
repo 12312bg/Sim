@@ -1,0 +1,6 @@
+{
+ "themes": [
+  "res://data/themes/religion.json",
+  "res://data/themes/prototype.json"
+ ]
+}

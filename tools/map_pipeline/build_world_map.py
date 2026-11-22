@@ -60,6 +60,8 @@ POPULATION_ADD = {"CHN": 23_600_000}
 MERGE_INTO = {"SCR": "CHN"}      # 黄岩岛
 # 索引图上相邻、但现实中隔海的地区对：改为海路
 NOT_LAND = {("AUS", "PNG"), ("VGB", "VIR"), ("BHR", "QAT")}
+# 文化地区之间：因海外领土（法属圭亚那属于法国本土多边形）而“陆路相邻”的，改为海路
+GROUP_NOT_LAND = {("brazil", "france"), ("andes", "france")}
 # 不参与模拟（仍绘制在地图上，显示为中性）
 EXCLUDE = {"ATA"}                # 南极洲
 MIN_POPULATION = 1000
@@ -344,7 +346,7 @@ def air_links(feats: list[dict]) -> list[tuple[int, int, float]]:
 
 def climate_of(lat: float) -> str:
     a = abs(lat)
-    return "hot" if a < 23.5 else ("temperate" if a < 45.0 else "cold")
+    return "hot" if a < 23.5 else ("temperate" if a < 55.0 else "cold")
 
 
 def wealth_of(income: str) -> str:
@@ -367,16 +369,124 @@ def build_relief(tif: Path) -> None:
             im.crop((col * TILE, row * TILE, (col + 1) * TILE, (row + 1) * TILE)).save(path, optimize=True)
 
 
-def build_borders(feats: list[dict]) -> list[list[float]]:
-    lines = []
+def build_borders(feats: list[dict]) -> list[dict]:
+    """边界折线，按“两侧归属”拆分：{"a": 国家, "b": 相邻国家（海岸线为 ""）, "p": [x,y,...]}。
+
+    Natural Earth 的国界在相邻国家间共享完全相同的顶点，因此可以按线段两端点识别共享边。
+    运行时再根据场景的分组决定画法（地区边界粗线 / 地区内国界细线 / 海岸线）。
+    每条共享边只输出一次（由代码较小的一方输出）。
+    """
+    owners: dict[tuple, set] = {}
+    rings_px = []
     for f in feats:
         for ring in f["rings"]:
             x, y = lonlat_to_px(ring[:, 0], ring[:, 1])
-            pts = simplify(np.column_stack([x, y]), BORDER_TOLERANCE)
-            for part in split_artificial_edges(pts):
-                lines.append([round(float(v), 1) for v in part.ravel()])
+            pts = np.column_stack([x, y])
+            rings_px.append((f["code"], pts))
+            for i in range(len(pts) - 1):
+                a, b = tuple(pts[i]), tuple(pts[i + 1])
+                if a == b:
+                    continue
+                owners.setdefault((a, b) if a < b else (b, a), set()).add(f["code"])
+
+    lines = []
+    for code, pts in rings_px:
+        run: list[int] = []
+        run_other = None
+
+        def flush():
+            if len(run) >= 2 and (run_other == "" or code < run_other):
+                seg = simplify(pts[run[0]:run[-1] + 1], BORDER_TOLERANCE)
+                for part in split_artificial_edges(seg):
+                    lines.append({"a": code, "b": run_other, "p": [round(float(v), 1) for v in part.ravel()]})
+
+        for i in range(len(pts) - 1):
+            a, b = tuple(pts[i]), tuple(pts[i + 1])
+            key = (a, b) if a < b else (b, a)
+            others = owners.get(key, {code}) - {code}
+            other = min(others) if others else ""
+            if other != run_other:
+                flush()
+                run = [i]
+                run_other = other
+            run.append(i + 1)
+        flush()
     return lines
 
+
+def build_grouped_scenario(feats: list[dict], ids: np.ndarray, links: list[dict], groups_cfg: dict,
+                           base: dict) -> dict:
+    """把国家级场景按 region_groups.json 合并为地区级场景。"""
+    by_code = {f["code"]: f for f in feats}
+    group_of = {}
+    for g in groups_cfg["groups"]:
+        for c in g["countries"]:
+            assert c in by_code and by_code[c]["active"], f"分组中的国家无效: {c}"
+            assert c not in group_of, f"国家重复分组: {c}"
+            group_of[c] = g["id"]
+    missing = [f["code"] for f in feats if f["active"] and f["code"] not in group_of]
+    assert not missing, f"未分组的国家: {missing}"
+
+    pixel_count = np.bincount(ids.ravel(), minlength=256)
+    regions = []
+    for g in groups_cfg["groups"]:
+        members = [by_code[c] for c in g["countries"]]
+        pop = sum(m["population"] for m in members)
+
+        def mode(fn):
+            acc: dict[str, float] = {}
+            for m in members:
+                acc[fn(m)] = acc.get(fn(m), 0.0) + m["population"]
+            return max(acc.items(), key=lambda kv: kv[1])[0]
+
+        wealth = mode(lambda m: wealth_of(m["income"]))
+        climate = mode(lambda m: climate_of(m["label_lonlat"][1]))
+        cw = sum(COUNTER_WEIGHT[wealth_of(m["income"])] * m["population"] for m in members) / max(pop, 1.0)
+
+        # 标注点：人口占 60% 以上的成员直接用它的标注点；否则取成员像素的质心并吸附到最近的成员像素
+        idxs = [m["index"] for m in members]
+        mask = np.isin(ids, idxs)
+        ys, xs = np.nonzero(mask)
+        main = max(members, key=lambda m: m["population"])
+        if main["population"] >= 0.6 * pop:
+            lx, ly = lonlat_to_px(*main["label_lonlat"])
+        else:
+            cx, cy = xs.mean(), ys.mean()
+            j = int(np.argmin((xs - cx) ** 2 + (ys - cy) ** 2))
+            lx, ly = (xs[j] + 0.5) * ID_SCALE, (ys[j] + 0.5) * ID_SCALE
+        # 范围框：成员像素坐标的 2%~98% 分位，避免远方小岛把范围撑到全球
+        bx0, bx1 = np.percentile(xs, [2, 98]) * ID_SCALE
+        by0, by1 = np.percentile(ys, [2, 98]) * ID_SCALE
+        regions.append({
+            "id": g["id"], "name": g["name"], "population": int(pop),
+            "counter_weight": round(cw, 2),
+            "traits": {"climate": climate, "wealth": wealth},
+            "countries": g["countries"],
+            "map": {"label": [round(float(lx), 1), round(float(ly), 1)],
+                    "bbox": [round(float(v), 1) for v in (bx0, by0, bx1 + ID_SCALE, by1 + ID_SCALE)],
+                    "pixels": int(sum(pixel_count[i] for i in idxs))},
+        })
+
+    agg: dict[tuple, float] = {}
+    for l in links:
+        ga, gb = group_of[l["a"]], group_of[l["b"]]
+        if ga == gb:
+            continue
+        t = l["type"]
+        if t == "land" and (min(ga, gb), max(ga, gb)) in GROUP_NOT_LAND:
+            t = "sea"
+        key = (min(ga, gb), max(ga, gb), t)
+        agg[key] = max(agg.get(key, 0.0), float(l["weight"]))
+    glinks = [{"a": a, "b": b, "type": t, "weight": w} for (a, b, t), w in sorted(agg.items())]
+    return {
+        "id": "world_regions",
+        "name": "真实世界（文化地区）",
+        "map": "res://data/map/world_map.json",
+        "labels": base.get("labels", {}),
+        "rules": base.get("rules", {}),
+        "regions": regions,
+        "links": glinks,
+    }
 
 def main() -> None:
     ap = argparse.ArgumentParser()
@@ -416,7 +526,8 @@ def main() -> None:
 
     print("生成边界线…")
     borders = build_borders(feats)
-    print(f"  {len(borders)} 条折线，{sum(len(b) for b in borders) // 2} 个点")
+    shared = sum(1 for b in borders if b["b"])
+    print(f"  {len(borders)} 条折线（共享国界 {shared}），{sum(len(b['p']) for b in borders) // 2} 个点")
 
     regions_meta = []
     for f in feats:
@@ -461,6 +572,14 @@ def main() -> None:
         "links": links,
     }
     scen_path.write_text(json.dumps(scenario, ensure_ascii=False, indent=1))
+
+    groups_cfg = json.loads((Path(__file__).parent / "region_groups.json").read_text())
+    gpath = ROOT / "data/scenarios/world_regions.json"
+    gold = json.loads(gpath.read_text()) if gpath.exists() else {}
+    grouped = build_grouped_scenario(feats, ids, links, groups_cfg, {
+        "labels": gold.get("labels", scenario["labels"]), "rules": gold.get("rules", scenario["rules"])})
+    gpath.write_text(json.dumps(grouped, ensure_ascii=False, indent=1))
+    print(f"  文化地区 {len(grouped['regions'])} 个，连接 {len(grouped['links'])} 条")
     print("完成。")
 
 

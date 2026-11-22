@@ -49,18 +49,25 @@ func is_unlocked(id: String) -> bool:
 	return true
 
 
+## 需要的最早年份（没有限制时返回一个极小值）。
+func min_year(id: String) -> int:
+	return int(defs[id].get("min_year", -999999))
+
+
 func cost_of(id: String) -> int:
 	return int(defs[id].get("cost", 0))
 
 
-## 返回 "" 表示可以购买，否则返回原因。
-func check_buy(id: String, points: int) -> String:
+## 返回 "" 表示可以购买，否则返回原因。year 为当前年份（不按年份计时的主题传极大值）。
+func check_buy(id: String, points: int, year: int = 999999) -> String:
 	if not defs.has(id):
 		return "未知升级"
 	if owned.has(id):
 		return "已拥有"
 	if not is_unlocked(id):
 		return "前置未满足"
+	if year < min_year(id):
+		return "年代未到"
 	if points < cost_of(id):
 		return "点数不足"
 	return ""

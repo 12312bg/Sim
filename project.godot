@@ -24,6 +24,10 @@ Game="*res://scripts/core/game.gd"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom="res://assets/ui/theme.tres"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

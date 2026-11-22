@@ -1,0 +1,121 @@
+{
+  "id": "religion",
+  "name": "宗教",
+  "desc": "从一个国家的一小群信徒开始，让信仰传遍世界。1650 年后世俗化浪潮兴起并不断加速：普通信徒会逐渐变为无神论者，只有狂信徒不受动摇。在 2100 年前让全人类皈依。",
+  "scenario": "res://data/scenarios/world_regions.json",
+  "default_agent_name": "无名之信",
+  "time": {
+    "unit": "year",
+    "start": -1000,
+    "end": 2100,
+    "seconds_per_tick": [0, 0.5, 0.2, 0.06]
+  },
+  "population_curve": {
+    "reference_year": 2019,
+    "points": [
+      [-1000, 50e6], [-500, 100e6], [1, 200e6], [500, 210e6], [1000, 300e6],
+      [1300, 400e6], [1400, 370e6], [1500, 460e6], [1600, 550e6], [1700, 610e6],
+      [1800, 990e6], [1900, 1650e6], [1950, 2525e6], [2000, 6145e6], [2019, 7713e6],
+      [2050, 9700e6], [2100, 10400e6]
+    ]
+  },
+  "labels": {
+    "agent": "信仰",
+    "converted": "信徒",
+    "converted_verb": "皈依",
+    "zealot": "狂信徒",
+    "lapsed": "无神论者",
+    "removed": "已移除",
+    "points": "信仰点",
+    "secularism": "世俗化",
+    "link_land": "陆路",
+    "link_sea": "海路",
+    "link_air": "远途",
+    "news_start": "{agent} 在 {region} 诞生",
+    "news_arrive": "{agent} 传入 {region}",
+    "news_secular": "启蒙思潮兴起，世俗化浪潮开始冲击各地信徒"
+  },
+  "map_colors": {
+    "converted": "#e0a526",
+    "zealot": "#b3202a",
+    "lapsed": "#2f7bc4"
+  },
+  "categories": {
+    "transmission": "传播",
+    "doctrine": "教义",
+    "adaptation": "适应"
+  },
+  "rules": {
+    "win_share": 0.99,
+    "seed_amount": 1,
+    "base_spread": 0.008,
+    "zeal_decay": 0.004,
+    "awareness_rate": 0.0,
+    "closure_types": [],
+    "cross_base": 0.006,
+    "cross_presence_exponent": 1.5,
+    "link_type_factor": { "land": 1.0, "sea": 0.6, "air": 0.15 },
+    "trait_resist": {
+      "climate": { "hot": 0.1, "temperate": 0.0, "cold": 0.25 },
+      "wealth": { "poor": 0.0, "mid": 0.15, "rich": 0.35 }
+    },
+    "opposition": { "enabled": false },
+    "secularism": {
+      "start_year": 1650,
+      "base_rate": 0.0004,
+      "doubling_years": 70,
+      "max_rate": 0.03,
+      "susceptible_factor": 0.5,
+      "trait_factor": { "wealth": { "rich": 1.6, "mid": 1.0, "poor": 0.5 } }
+    },
+    "points": { "start": 6, "per_new_region": 1, "convert_chunk_ratio": 0.005 },
+    "bubbles": { "lifetime_seconds": 8, "max": 8 },
+    "events": { "chance": 0.02 },
+    "end_grades": [[0.9, "S"], [0.75, "A"], [0.5, "B"], [0.25, "C"], [0.0, "D"]],
+    "end_win_share": 0.5
+  },
+  "upgrades": [
+    { "id": "tr_word", "name": "口耳相传", "category": "transmission", "cost": 3, "requires": [], "effects": { "spread": 0.15 }, "desc": "信徒向亲友讲述信仰，国内传播加快。" },
+    { "id": "tr_scroll", "name": "经文抄本", "category": "transmission", "cost": 6, "requires": ["tr_word"], "effects": { "spread": 0.2 }, "desc": "手抄经文在信众间流传。" },
+    { "id": "tr_print", "name": "印刷经书", "category": "transmission", "cost": 12, "requires": ["tr_scroll"], "min_year": 1450, "effects": { "spread": 0.3, "points_bonus": 0.1 }, "desc": "印刷术让经书大量发行。" },
+    { "id": "tr_radio", "name": "广播布道", "category": "transmission", "cost": 16, "requires": ["tr_print"], "min_year": 1920, "effects": { "spread": 0.3, "cross_air": 1.0 }, "desc": "电波把布道送进千家万户。" },
+    { "id": "tr_net", "name": "网络传教", "category": "transmission", "cost": 20, "requires": ["tr_radio"], "min_year": 1995, "effects": { "spread": 0.4, "cross_air": 1.5, "revival": 0.01 }, "desc": "在互联网上建立信仰社群。" },
+    { "id": "tr_caravan", "name": "商队随行", "category": "transmission", "cost": 6, "requires": ["tr_word"], "effects": { "cross_land": 0.8 }, "desc": "随商队沿陆路传入邻国。" },
+    { "id": "tr_silk", "name": "商路网络", "category": "transmission", "cost": 10, "requires": ["tr_caravan"], "effects": { "cross_land": 0.8, "cross_air": 0.5 }, "desc": "沿贸易网络传向远方。" },
+    { "id": "tr_pilgrim", "name": "朝圣之路", "category": "transmission", "cost": 9, "requires": ["tr_caravan"], "effects": { "cross_air": 0.8, "points_bonus": 0.1 }, "desc": "各地朝圣者把信仰带回故乡。" },
+    { "id": "tr_ship", "name": "随船传教", "category": "transmission", "cost": 7, "requires": ["tr_word"], "effects": { "cross_sea": 0.8 }, "desc": "传教士搭乘商船渡海。" },
+    { "id": "tr_ocean", "name": "远洋传教", "category": "transmission", "cost": 12, "requires": ["tr_ship"], "min_year": 1450, "effects": { "cross_sea": 1.2, "cross_air": 0.8 }, "desc": "大航海时代，信仰跨越大洋。" },
+
+    { "id": "dc_creed", "name": "核心信条", "category": "doctrine", "cost": 3, "requires": [], "effects": { "spread": 0.1, "zeal": 0.0005 }, "desc": "确立简明的信条，信徒更加坚定。" },
+    { "id": "dc_ritual", "name": "仪式与节庆", "category": "doctrine", "cost": 6, "requires": ["dc_creed"], "effects": { "points_bonus": 0.2 }, "desc": "定期的仪式与节庆凝聚信众，带来更多信仰点。" },
+    { "id": "dc_order", "name": "教团组织", "category": "doctrine", "cost": 14, "requires": ["dc_ritual"], "effects": { "zeal": 0.0025, "points_bonus": 0.1 }, "desc": "严密的教团培养出大批虔诚信徒。" },
+    { "id": "dc_prophecy", "name": "末世预言", "category": "doctrine", "cost": 8, "requires": ["dc_creed"], "effects": { "zeal": 0.002, "zealot_spread": 0.3 }, "desc": "关于终末的预言点燃狂热，狂信徒积极传教。" },
+    { "id": "dc_martyr", "name": "殉道精神", "category": "doctrine", "cost": 12, "requires": ["dc_prophecy"], "effects": { "zeal": 0.003, "zealot_spread": 0.3 }, "desc": "为信仰献身被视为至高荣耀。" },
+    { "id": "dc_ascetic", "name": "苦修戒律", "category": "doctrine", "cost": 10, "requires": ["dc_creed"], "effects": { "zeal": 0.002, "spread": -0.05 }, "desc": "严苛的戒律让信徒坚定，但也让外人望而却步。" },
+    { "id": "dc_mystic", "name": "神秘体验", "category": "doctrine", "cost": 9, "requires": ["dc_creed"], "effects": { "spread": 0.15, "zeal": 0.001 }, "desc": "冥想与启示带来直接的宗教体验。" },
+    { "id": "dc_canon", "name": "圣典定本", "category": "doctrine", "cost": 12, "requires": ["dc_mystic"], "effects": { "spread": 0.2, "zeal": 0.001 }, "desc": "统一的经典消除分歧。" },
+    { "id": "dc_forgive", "name": "宽恕与回归", "category": "doctrine", "cost": 10, "requires": ["dc_creed"], "effects": { "revival": 0.02 }, "desc": "欢迎离开的人重新回来，无神论者开始回流。" },
+    { "id": "dc_revival", "name": "复兴运动", "category": "doctrine", "cost": 16, "requires": ["dc_forgive"], "effects": { "revival": 0.04, "zeal": 0.001 }, "desc": "大规模的信仰复兴，大量无神论者重新皈依。" },
+
+    { "id": "ad_local", "name": "融合本土习俗", "category": "adaptation", "cost": 4, "requires": [], "effects": { "resist_climate_hot": 0.1, "spread": 0.05 }, "desc": "吸收当地习俗，在炎热地区更易被接受。" },
+    { "id": "ad_tolerance", "name": "宽容姿态", "category": "adaptation", "cost": 9, "requires": ["ad_local"], "effects": { "cross_land": 0.3, "cross_sea": 0.3 }, "desc": "与其他信仰和平共处，外国更愿意接纳。" },
+    { "id": "ad_north", "name": "北地布道", "category": "adaptation", "cost": 7, "requires": ["ad_local"], "effects": { "resist_climate_cold": 0.15 }, "desc": "适应严寒地区的生活方式。" },
+    { "id": "ad_frost", "name": "冻土坚守", "category": "adaptation", "cost": 11, "requires": ["ad_north"], "effects": { "resist_climate_cold": 0.1, "zeal": 0.001 }, "desc": "在最艰苦的地方扎根。" },
+    { "id": "ad_city", "name": "城市传教", "category": "adaptation", "cost": 7, "requires": ["ad_local"], "effects": { "resist_wealth_mid": 0.15 }, "desc": "深入城镇，吸引市民阶层。" },
+    { "id": "ad_elite", "name": "精英皈依", "category": "adaptation", "cost": 12, "requires": ["ad_city"], "effects": { "resist_wealth_rich": 0.2, "resist_wealth_mid": 0.05 }, "desc": "赢得贵族与学者的支持。" },
+    { "id": "ad_philo", "name": "哲学化诠释", "category": "adaptation", "cost": 14, "requires": ["ad_elite"], "effects": { "resist_wealth_rich": 0.15, "secular_resist": 0.15 }, "desc": "用哲学语言阐释教义，富裕社会更易接受。" },
+    { "id": "ad_charity", "name": "慈善事业", "category": "adaptation", "cost": 10, "requires": ["ad_city"], "effects": { "secular_resist": 0.15, "points_bonus": 0.05 }, "desc": "兴办医院与学校，赢得人心，减缓世俗化。" },
+    { "id": "ad_reason", "name": "信仰与理性调和", "category": "adaptation", "cost": 16, "requires": ["ad_philo"], "min_year": 1650, "effects": { "secular_resist": 0.25 }, "desc": "主动回应科学与理性的挑战，大幅减缓世俗化。" },
+    { "id": "ad_modern", "name": "现代化改革", "category": "adaptation", "cost": 20, "requires": ["ad_reason"], "min_year": 1900, "effects": { "secular_resist": 0.2, "revival": 0.02 }, "desc": "改革组织与礼仪，适应现代社会。" }
+  ],
+  "events": [
+    { "id": "miracle", "name": "神迹显现", "weight": 3, "scope": "region", "duration": 30, "effects": { "spread": 0.6 }, "news": "{region} 传出神迹，{agent} 在当地迅速传播" },
+    { "id": "preacher", "name": "布道者诞生", "weight": 3, "scope": "region", "duration": 40, "effects": { "spread": 0.4, "zeal": 0.01 }, "news": "一位伟大的布道者在 {region} 出现" },
+    { "id": "pilgrimage", "name": "朝圣潮", "weight": 2, "scope": "region", "duration": 20, "effects": { "cross_land": 1.5, "cross_sea": 1.5, "cross_air": 1.5 }, "news": "各地朝圣者涌向 {region}，又把信仰带回远方" },
+    { "id": "ruler", "name": "君主皈依", "weight": 2, "scope": "region", "convert_fraction": 0.15, "news": "{region} 的统治者皈依 {agent}，大批民众随之改宗", "max_year": 1900 },
+    { "id": "scripture", "name": "圣典成书", "weight": 2, "scope": "global", "points": 4, "news": "{agent} 的圣典编纂完成" },
+    { "id": "council", "name": "大公会议", "weight": 1, "scope": "global", "duration": 50, "effects": { "zeal": 0.005 }, "news": "{agent} 召开大公会议，统一教义、坚定信众" },
+    { "id": "awakening", "name": "大觉醒", "weight": 2, "scope": "region", "duration": 30, "effects": { "revival": 0.06 }, "zealot_fraction": 0.1, "news": "{region} 爆发信仰大觉醒，无神论者纷纷回归", "min_year": 1650 },
+    { "id": "debate", "name": "公开辩论获胜", "weight": 2, "scope": "region", "duration": 40, "effects": { "secular_resist": 0.5 }, "news": "{agent} 在 {region} 的公开辩论中胜出，世俗化势头受挫", "min_year": 1650 }
+  ]
+}

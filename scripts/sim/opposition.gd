@@ -1,22 +1,27 @@
 class_name Opposition
 extends RefCounted
-## 反制力量：Plague 中的“解药研究”，Religion 中的“科学/怀疑论”。
-## 全球警觉度达到阈值后启动，进度到 1.0 时玩家失败。
+## 反制力量（原型主题）：全球警觉度达到阈值后启动，进度到 1.0 时玩家失败。
+## 宗教主题关闭它，改用 SpreadModel.secular_rate 的世俗化机制。
 
 var progress: float = 0.0
 var active: bool = false
+## 主题可以关闭反制（宗教主题用世俗化代替）。
+var enabled: bool = true
 
 var start_awareness: float = 0.15
 var base_rate: float = 0.004
 
 
 func configure(cfg: Dictionary) -> void:
+	enabled = bool(cfg.get("enabled", true))
 	start_awareness = float(cfg.get("start_awareness", start_awareness))
 	base_rate = float(cfg.get("base_rate", base_rate))
 
 
 ## 返回 true 表示本日刚刚启动。
 func step(regions: Array, stats: Dictionary) -> bool:
+	if not enabled:
+		return false
 	var total_living := 0.0
 	var weighted_awareness := 0.0
 	var research := 0.0

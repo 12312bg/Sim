@@ -1,0 +1,3072 @@
+{
+ "id": "world_regions",
+ "name": "真实世界（文化地区）",
+ "map": "res://data/map/world_map.json",
+ "labels": {
+  "agent": "传播体",
+  "converted": "已转化",
+  "converted_verb": "转化",
+  "removed": "已移除",
+  "points": "点数",
+  "opposition": "反制研究"
+ },
+ "rules": {
+  "win_condition": "convert_all",
+  "seed_amount": 1,
+  "base_spread": 0.12,
+  "base_lethality": 0.0,
+  "base_visibility": 0.2,
+  "awareness_rate": 0.03,
+  "cross_base": 0.03,
+  "cross_presence_exponent": 1.5,
+  "closure_threshold": 0.6,
+  "closure_strength": 0.9,
+  "closure_types": [
+   "air",
+   "sea"
+  ],
+  "trait_resist": {
+   "climate": {
+    "hot": 0.0,
+    "temperate": 0.15,
+    "cold": 0.35
+   },
+   "wealth": {
+    "poor": 0.0,
+    "mid": 0.2,
+    "rich": 0.4
+   }
+  },
+  "opposition": {
+   "start_awareness": 0.12,
+   "base_rate": 0.006
+  },
+  "points": {
+   "start": 4,
+   "per_new_region": 1,
+   "convert_chunk_ratio": 0.033
+  },
+  "bubbles": {
+   "lifetime_seconds": 8,
+   "max": 8
+  }
+ },
+ "regions": [
+  {
+   "id": "china",
+   "name": "中国",
+   "population": 1429462845,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   },
+   "countries": [
+    "CHN",
+    "HKG",
+    "MAC"
+   ],
+   "map": {
+    "label": [
+     17180.2,
+     3450.1
+    ],
+    "bbox": [
+     15508.0,
+     2376.0,
+     18558.0,
+     4020.0
+    ],
+    "pixels": 866086
+   }
+  },
+  {
+   "id": "japan",
+   "name": "日本",
+   "population": 126264931,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "JPN"
+   ],
+   "map": {
+    "label": [
+     19106.5,
+     3231.4
+    ],
+    "bbox": [
+     18580.0,
+     2708.0,
+     19518.0,
+     3522.0
+    ],
+    "pixels": 37221
+   }
+  },
+  {
+   "id": "korea",
+   "name": "朝鲜半岛",
+   "population": 77375259,
+   "counter_weight": 1.27,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "KOR",
+    "PRK"
+   ],
+   "map": {
+    "label": [
+     18487.8,
+     3216.9
+    ],
+    "bbox": [
+     18296.0,
+     2858.0,
+     18594.0,
+     3328.0
+    ],
+    "pixels": 21727
+   }
+  },
+  {
+   "id": "inner_asia",
+   "name": "内亚",
+   "population": 77039754,
+   "counter_weight": 0.73,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   },
+   "countries": [
+    "MNG",
+    "KAZ",
+    "KGZ",
+    "TJK",
+    "TKM",
+    "UZB"
+   ],
+   "map": {
+    "label": [
+     15413.0,
+     2629.0
+    ],
+    "bbox": [
+     13832.0,
+     2182.0,
+     17660.0,
+     3140.0
+    ],
+    "pixels": 586087
+   }
+  },
+  {
+   "id": "india",
+   "name": "印度",
+   "population": 1366417754,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "IND"
+   ],
+   "map": {
+    "label": [
+     15561.5,
+     4038.8
+    ],
+    "bbox": [
+     15026.0,
+     3374.0,
+     16430.0,
+     4774.0
+    ],
+    "pixels": 245469
+   }
+  },
+  {
+   "id": "indus",
+   "name": "印度河与兴都库什",
+   "population": 254607072,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   },
+   "countries": [
+    "PAK",
+    "AFG"
+   ],
+   "map": {
+    "label": [
+     14912.7,
+     3640.3
+    ],
+    "bbox": [
+     14482.0,
+     3172.0,
+     15310.0,
+     3908.0
+    ],
+    "pixels": 130384
+   }
+  },
+  {
+   "id": "bengal",
+   "name": "孟加拉与喜马拉雅",
+   "population": 192417963,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   },
+   "countries": [
+    "BGD",
+    "NPL",
+    "BTN"
+   ],
+   "map": {
+    "label": [
+     16181.1,
+     3947.1
+    ],
+    "bbox": [
+     15640.0,
+     3604.0,
+     16336.0,
+     4088.0
+    ],
+    "pixels": 27477
+   }
+  },
+  {
+   "id": "lanka",
+   "name": "斯里兰卡与马尔代夫",
+   "population": 22336953,
+   "counter_weight": 0.61,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "LKA",
+    "MDV",
+    "IOT"
+   ],
+   "map": {
+    "label": [
+     15642.3,
+     4945.1
+    ],
+    "bbox": [
+     15180.0,
+     4824.0,
+     15704.3,
+     5222.0
+    ],
+    "pixels": 5394
+   }
+  },
+  {
+   "id": "indochina",
+   "name": "中南半岛",
+   "population": 243789105,
+   "counter_weight": 0.71,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "THA",
+    "VNM",
+    "MMR",
+    "KHM",
+    "LAO"
+   ],
+   "map": {
+    "label": [
+     16859.0,
+     4339.0
+    ],
+    "bbox": [
+     16418.0,
+     3800.0,
+     17306.0,
+     4904.0
+    ],
+    "pixels": 149938
+   }
+  },
+  {
+   "id": "malay",
+   "name": "马来群岛",
+   "population": 310005318,
+   "counter_weight": 0.66,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "IDN",
+    "MYS",
+    "SGP",
+    "BRN",
+    "TLS"
+   ],
+   "map": {
+    "label": [
+     16913.6,
+     5457.3
+    ],
+    "bbox": [
+     16652.0,
+     5066.0,
+     19220.0,
+     5926.0
+    ],
+    "pixels": 170463
+   }
+  },
+  {
+   "id": "philippines",
+   "name": "菲律宾",
+   "population": 108116615,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "PHL"
+   ],
+   "map": {
+    "label": [
+     18147.9,
+     4728.1
+    ],
+    "bbox": [
+     17904.0,
+     4302.0,
+     18372.0,
+     5036.0
+    ],
+    "pixels": 24216
+   }
+  },
+  {
+   "id": "persia",
+   "name": "波斯",
+   "population": 82913906,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   },
+   "countries": [
+    "IRN"
+   ],
+   "map": {
+    "label": [
+     14095.9,
+     3470.0
+    ],
+    "bbox": [
+     13530.0,
+     3090.0,
+     14492.0,
+     3832.0
+    ],
+    "pixels": 140244
+   }
+  },
+  {
+   "id": "anatolia",
+   "name": "安纳托利亚与高加索",
+   "population": 100131046,
+   "counter_weight": 0.97,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   },
+   "countries": [
+    "TUR",
+    "GEO",
+    "ARM",
+    "AZE"
+   ],
+   "map": {
+    "label": [
+     12870.5,
+     3039.3
+    ],
+    "bbox": [
+     12416.0,
+     2844.0,
+     13722.0,
+     3202.0
+    ],
+    "pixels": 91927
+   }
+  },
+  {
+   "id": "fertile",
+   "name": "新月沃地",
+   "population": 87075931,
+   "counter_weight": 0.78,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   },
+   "countries": [
+    "IRQ",
+    "SYR",
+    "LBN",
+    "ISR",
+    "PSX",
+    "JOR"
+   ],
+   "map": {
+    "label": [
+     13271.0,
+     3401.0
+    ],
+    "bbox": [
+     12900.0,
+     3186.0,
+     13636.0,
+     3626.0
+    ],
+    "pixels": 65918
+   }
+  },
+  {
+   "id": "arabia",
+   "name": "阿拉伯半岛",
+   "population": 86856287,
+   "counter_weight": 1.26,
+   "traits": {
+    "climate": "hot",
+    "wealth": "rich"
+   },
+   "countries": [
+    "SAU",
+    "YEM",
+    "OMN",
+    "ARE",
+    "QAT",
+    "BHR",
+    "KWT"
+   ],
+   "map": {
+    "label": [
+     13595.0,
+     4051.0
+    ],
+    "bbox": [
+     13012.0,
+     3554.0,
+     14264.0,
+     4554.0
+    ],
+    "pixels": 222097
+   }
+  },
+  {
+   "id": "nile",
+   "name": "尼罗河流域",
+   "population": 154263424,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   },
+   "countries": [
+    "EGY",
+    "SDN",
+    "SDS"
+   ],
+   "map": {
+    "label": [
+     12566.8,
+     3828.8
+    ],
+    "bbox": [
+     12218.0,
+     3558.0,
+     12986.0,
+     5106.0
+    ],
+    "pixels": 269882
+   }
+  },
+  {
+   "id": "maghreb",
+   "name": "马格里布",
+   "population": 98600247,
+   "counter_weight": 0.85,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   },
+   "countries": [
+    "MAR",
+    "DZA",
+    "TUN",
+    "LBY",
+    "SAH"
+   ],
+   "map": {
+    "label": [
+     11181.0,
+     3711.0
+    ],
+    "bbox": [
+     9960.0,
+     3238.0,
+     12252.0,
+     4152.0
+    ],
+    "pixels": 395925
+   }
+  },
+  {
+   "id": "sahel",
+   "name": "萨赫勒",
+   "population": 83762696,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "MRT",
+    "MLI",
+    "NER",
+    "TCD",
+    "BFA"
+   ],
+   "map": {
+    "label": [
+     11023.0,
+     4367.0
+    ],
+    "bbox": [
+     9924.0,
+     3904.0,
+     12138.0,
+     4820.0
+    ],
+    "pixels": 383173
+   }
+  },
+  {
+   "id": "nigeria",
+   "name": "尼日利亚",
+   "population": 200963599,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "NGA"
+   ],
+   "map": {
+    "label": [
+     11250.2,
+     4833.6
+    ],
+    "bbox": [
+     10996.0,
+     4600.0,
+     11618.0,
+     5104.0
+    ],
+    "pixels": 67404
+   }
+  },
+  {
+   "id": "west_africa",
+   "name": "西非沿海",
+   "population": 122659213,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "SEN",
+    "GMB",
+    "GNB",
+    "GIN",
+    "SLE",
+    "LBR",
+    "CIV",
+    "GHA",
+    "TGO",
+    "BEN",
+    "CPV",
+    "SHN"
+   ],
+   "map": {
+    "label": [
+     10373.0,
+     4829.0
+    ],
+    "bbox": [
+     9816.0,
+     4448.0,
+     10966.0,
+     5090.0
+    ],
+    "pixels": 104575
+   }
+  },
+  {
+   "id": "horn",
+   "name": "非洲之角",
+   "population": 129325803,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "ETH",
+    "ERI",
+    "DJI",
+    "SOM"
+   ],
+   "map": {
+    "label": [
+     13145.3,
+     4918.0
+    ],
+    "bbox": [
+     12884.0,
+     4436.0,
+     13800.0,
+     5362.0
+    ],
+    "pixels": 141937
+   }
+  },
+  {
+   "id": "east_africa",
+   "name": "东非",
+   "population": 179006560,
+   "counter_weight": 0.6,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "KEN",
+    "TZA",
+    "UGA",
+    "RWA",
+    "BDI"
+   ],
+   "map": {
+    "label": [
+     12919.0,
+     5579.0
+    ],
+    "bbox": [
+     12586.0,
+     5168.0,
+     13240.0,
+     6052.0
+    ],
+    "pixels": 134215
+   }
+  },
+  {
+   "id": "central_africa",
+   "name": "中部非洲",
+   "population": 126536261,
+   "counter_weight": 0.62,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "COD",
+    "COG",
+    "CAF",
+    "CMR",
+    "GAB",
+    "GNQ",
+    "STP"
+   ],
+   "map": {
+    "label": [
+     12207.5,
+     5511.5
+    ],
+    "bbox": [
+     11398.0,
+     4832.0,
+     12568.0,
+     6042.0
+    ],
+    "pixels": 296639
+   }
+  },
+  {
+   "id": "southern_africa",
+   "name": "南部非洲",
+   "population": 179956471,
+   "counter_weight": 0.81,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   },
+   "countries": [
+    "ZAF",
+    "NAM",
+    "BWA",
+    "LSO",
+    "SWZ",
+    "ZWE",
+    "ZMB",
+    "MOZ",
+    "MWI",
+    "AGO"
+   ],
+   "map": {
+    "label": [
+     12273.0,
+     6579.0
+    ],
+    "bbox": [
+     11598.0,
+     5866.0,
+     13124.0,
+     7382.0
+    ],
+    "pixels": 467311
+   }
+  },
+  {
+   "id": "madagascar",
+   "name": "马达加斯加与诸岛",
+   "population": 29183529,
+   "counter_weight": 0.62,
+   "traits": {
+    "climate": "hot",
+    "wealth": "poor"
+   },
+   "countries": [
+    "MDG",
+    "COM",
+    "MUS",
+    "SYC"
+   ],
+   "map": {
+    "label": [
+     13602.3,
+     6517.7
+    ],
+    "bbox": [
+     13424.0,
+     6182.0,
+     13800.0,
+     6898.0
+    ],
+    "pixels": 47095
+   }
+  },
+  {
+   "id": "british",
+   "name": "不列颠群岛",
+   "population": 72031025,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "GBR",
+    "IRL",
+    "IMN",
+    "GGY",
+    "JEY"
+   ],
+   "map": {
+    "label": [
+     10673.0,
+     2135.8
+    ],
+    "bbox": [
+     10218.0,
+     1890.0,
+     10856.0,
+     2360.0
+    ],
+    "pixels": 41145
+   }
+  },
+  {
+   "id": "nordic",
+   "name": "北欧",
+   "population": 27468316,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   },
+   "countries": [
+    "SWE",
+    "NOR",
+    "DNK",
+    "FIN",
+    "ISL",
+    "FRO",
+    "ALD",
+    "GRL"
+   ],
+   "map": {
+    "label": [
+     9281.0,
+     1077.0
+    ],
+    "bbox": [
+     6908.0,
+     446.0,
+     12484.0,
+     1902.0
+    ],
+    "pixels": 840553
+   }
+  },
+  {
+   "id": "france",
+   "name": "法兰西",
+   "population": 67098851,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "FRA",
+    "MCO"
+   ],
+   "map": {
+    "label": [
+     10953.1,
+     2598.2
+    ],
+    "bbox": [
+     7562.0,
+     2388.0,
+     11270.0,
+     5226.0
+    ],
+    "pixels": 64834
+   }
+  },
+  {
+   "id": "lowlands",
+   "name": "低地国家",
+   "population": 29436801,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "NLD",
+    "BEL",
+    "LUX"
+   ],
+   "map": {
+    "label": [
+     11087.0,
+     2323.0
+    ],
+    "bbox": [
+     10972.0,
+     2199.1,
+     11212.9,
+     2422.0
+    ],
+    "pixels": 8429
+   }
+  },
+  {
+   "id": "germany",
+   "name": "德意志",
+   "population": 100622717,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "DEU",
+    "AUT",
+    "CHE",
+    "LIE"
+   ],
+   "map": {
+    "label": [
+     11380.7,
+     2342.3
+    ],
+    "bbox": [
+     11192.0,
+     2140.0,
+     11764.0,
+     2614.0
+    ],
+    "pixels": 55209
+   }
+  },
+  {
+   "id": "italy",
+   "name": "意大利",
+   "population": 60833909,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "ITA",
+    "SMR",
+    "MLT"
+   ],
+   "map": {
+    "label": [
+     11464.6,
+     2716.1
+    ],
+    "bbox": [
+     11236.0,
+     2604.0,
+     11834.0,
+     3164.0
+    ],
+    "pixels": 30625
+   }
+  },
+  {
+   "id": "iberia",
+   "name": "伊比利亚",
+   "population": 57457041,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "ESP",
+    "PRT",
+    "AND",
+    "GIB"
+   ],
+   "map": {
+    "label": [
+     10592.1,
+     2994.5
+    ],
+    "bbox": [
+     9984.0,
+     2798.0,
+     10936.0,
+     3212.0
+    ],
+    "pixels": 58061
+   }
+  },
+  {
+   "id": "central_europe",
+   "name": "中东欧",
+   "population": 69890828,
+   "counter_weight": 1.56,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "POL",
+    "CZE",
+    "SVK",
+    "HUN",
+    "EST",
+    "LVA",
+    "LTU"
+   ],
+   "map": {
+    "label": [
+     12025.0,
+     2255.0
+    ],
+    "bbox": [
+     11624.0,
+     1854.0,
+     12434.0,
+     2612.0
+    ],
+    "pixels": 85430
+   }
+  },
+  {
+   "id": "balkans",
+   "name": "巴尔干",
+   "population": 50951150,
+   "counter_weight": 1.03,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   },
+   "countries": [
+    "SVN",
+    "HRV",
+    "BIH",
+    "SRB",
+    "MNE",
+    "MKD",
+    "ALB",
+    "BGR",
+    "ROU",
+    "MDA"
+   ],
+   "map": {
+    "label": [
+     12155.0,
+     2725.0
+    ],
+    "bbox": [
+     11670.0,
+     2526.0,
+     12534.0,
+     2944.0
+    ],
+    "pixels": 68869
+   }
+  },
+  {
+   "id": "greece",
+   "name": "希腊与塞浦路斯",
+   "population": 11930597,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "GRC",
+    "CYP",
+    "ESB",
+    "WSB"
+   ],
+   "map": {
+    "label": [
+     12103.5,
+     3030.4
+    ],
+    "bbox": [
+     12028.0,
+     2918.0,
+     12810.0,
+     3304.0
+    ],
+    "pixels": 14553
+   }
+  },
+  {
+   "id": "ruthenia",
+   "name": "乌克兰与白俄罗斯",
+   "population": 53852011,
+   "counter_weight": 0.67,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "poor"
+   },
+   "countries": [
+    "UKR",
+    "BLR"
+   ],
+   "map": {
+    "label": [
+     12728.5,
+     2416.5
+    ],
+    "bbox": [
+     12212.0,
+     2074.0,
+     13132.0,
+     2676.0
+    ],
+    "pixels": 92026
+   }
+  },
+  {
+   "id": "russia",
+   "name": "俄罗斯",
+   "population": 144373535,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "cold",
+    "wealth": "mid"
+   },
+   "countries": [
+    "RUS"
+   ],
+   "map": {
+    "label": [
+     13481.2,
+     1905.0
+    ],
+    "bbox": [
+     12688.0,
+     860.0,
+     21120.0,
+     2584.0
+    ],
+    "pixels": 2644825
+   }
+  },
+  {
+   "id": "usa",
+   "name": "美国",
+   "population": 328303441,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "USA",
+    "BMU"
+   ],
+   "map": {
+    "label": [
+     4951.0,
+     3027.7
+    ],
+    "bbox": [
+     1010.0,
+     1230.0,
+     6366.0,
+     3628.0
+    ],
+    "pixels": 1013853
+   }
+  },
+  {
+   "id": "canada",
+   "name": "加拿大",
+   "population": 37595259,
+   "counter_weight": 1.6,
+   "traits": {
+    "climate": "cold",
+    "wealth": "rich"
+   },
+   "countries": [
+    "CAN",
+    "SPM"
+   ],
+   "map": {
+    "label": [
+     4685.4,
+     1780.5
+    ],
+    "bbox": [
+     2554.0,
+     512.0,
+     7142.0,
+     2640.0
+    ],
+    "pixels": 1551132
+   }
+  },
+  {
+   "id": "mesoamerica",
+   "name": "墨西哥与中美洲",
+   "population": 176609080,
+   "counter_weight": 0.91,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   },
+   "countries": [
+    "MEX",
+    "GTM",
+    "HND",
+    "SLV",
+    "NIC",
+    "CRI",
+    "PAN",
+    "BLZ"
+   ],
+   "map": {
+    "label": [
+     4662.6,
+     3964.8
+    ],
+    "bbox": [
+     3900.0,
+     3508.0,
+     5940.0,
+     4876.0
+    ],
+    "pixels": 199100
+   }
+  },
+  {
+   "id": "caribbean",
+   "name": "加勒比",
+   "population": 42787841,
+   "counter_weight": 0.98,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   },
+   "countries": [
+    "ABW",
+    "AIA",
+    "ATG",
+    "BHS",
+    "BLM",
+    "BRB",
+    "CUB",
+    "CUW",
+    "CYM",
+    "DMA",
+    "DOM",
+    "GRD",
+    "HTI",
+    "JAM",
+    "KNA",
+    "LCA",
+    "MAF",
+    "MSR",
+    "PRI",
+    "SXM",
+    "TCA",
+    "TTO",
+    "VCT",
+    "VGB",
+    "VIR"
+   ],
+   "map": {
+    "label": [
+     6299.0,
+     4183.0
+    ],
+    "bbox": [
+     5766.0,
+     3894.0,
+     7122.0,
+     4752.0
+    ],
+    "pixels": 20011
+   }
+  },
+  {
+   "id": "brazil",
+   "name": "巴西",
+   "population": 211049527,
+   "counter_weight": 1.0,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   },
+   "countries": [
+    "BRA"
+   ],
+   "map": {
+    "label": [
+     7826.4,
+     6125.9
+    ],
+    "bbox": [
+     6566.0,
+     5280.0,
+     8542.0,
+     7168.0
+    ],
+    "pixels": 637079
+   }
+  },
+  {
+   "id": "andes",
+   "name": "安第斯与圭亚那",
+   "population": 141616616,
+   "counter_weight": 0.97,
+   "traits": {
+    "climate": "hot",
+    "wealth": "mid"
+   },
+   "countries": [
+    "COL",
+    "VEN",
+    "ECU",
+    "PER",
+    "BOL",
+    "GUY",
+    "SUR"
+   ],
+   "map": {
+    "label": [
+     6609.0,
+     5617.0
+    ],
+    "bbox": [
+     6016.0,
+     4772.0,
+     7408.0,
+     6650.0
+    ],
+    "pixels": 377283
+   }
+  },
+  {
+   "id": "southern_cone",
+   "name": "南锥",
+   "population": 74400518,
+   "counter_weight": 0.96,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "mid"
+   },
+   "countries": [
+    "ARG",
+    "CHL",
+    "URY",
+    "PRY",
+    "FLK"
+   ],
+   "map": {
+    "label": [
+     6949.6,
+     7410.1
+    ],
+    "bbox": [
+     6360.0,
+     6636.0,
+     7496.0,
+     8620.0
+    ],
+    "pixels": 374560
+   }
+  },
+  {
+   "id": "oceania",
+   "name": "大洋洲",
+   "population": 42433214,
+   "counter_weight": 1.33,
+   "traits": {
+    "climate": "temperate",
+    "wealth": "rich"
+   },
+   "countries": [
+    "AUS",
+    "NZL",
+    "NFK",
+    "IOA",
+    "FJI",
+    "NCL",
+    "PNG",
+    "SLB",
+    "VUT",
+    "ASM",
+    "COK",
+    "NIU",
+    "PYF",
+    "TON",
+    "TUV",
+    "WLF",
+    "WSM",
+    "FSM",
+    "GUM",
+    "KIR",
+    "MHL",
+    "MNP",
+    "NRU",
+    "PLW"
+   ],
+   "map": {
+    "label": [
+     18975.0,
+     6911.0
+    ],
+    "bbox": [
+     17730.0,
+     5744.0,
+     21198.0,
+     7960.0
+    ],
+    "pixels": 703640
+   }
+  }
+ ],
+ "links": [
+  {
+   "a": "anatolia",
+   "b": "arabia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "anatolia",
+   "b": "balkans",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "balkans",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "anatolia",
+   "b": "balkans",
+   "type": "sea",
+   "weight": 0.82
+  },
+  {
+   "a": "anatolia",
+   "b": "central_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "central_europe",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "anatolia",
+   "b": "east_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "fertile",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "fertile",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "anatolia",
+   "b": "fertile",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "anatolia",
+   "b": "germany",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "anatolia",
+   "b": "greece",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "greece",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "anatolia",
+   "b": "greece",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "anatolia",
+   "b": "horn",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "india",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "anatolia",
+   "b": "inner_asia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "inner_asia",
+   "type": "sea",
+   "weight": 0.84
+  },
+  {
+   "a": "anatolia",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "anatolia",
+   "b": "maghreb",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "nile",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "persia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "persia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "anatolia",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "anatolia",
+   "b": "russia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "anatolia",
+   "b": "ruthenia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "ruthenia",
+   "type": "sea",
+   "weight": 0.77
+  },
+  {
+   "a": "anatolia",
+   "b": "sahel",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "anatolia",
+   "b": "southern_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "andes",
+   "b": "brazil",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "andes",
+   "b": "brazil",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "andes",
+   "b": "british",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "andes",
+   "b": "canada",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "andes",
+   "b": "caribbean",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "andes",
+   "b": "caribbean",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "andes",
+   "b": "france",
+   "type": "sea",
+   "weight": 1.0
+  },
+  {
+   "a": "andes",
+   "b": "iberia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "andes",
+   "b": "mesoamerica",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "andes",
+   "b": "mesoamerica",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "andes",
+   "b": "mesoamerica",
+   "type": "sea",
+   "weight": 0.88
+  },
+  {
+   "a": "andes",
+   "b": "southern_cone",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "andes",
+   "b": "southern_cone",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "andes",
+   "b": "usa",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "arabia",
+   "b": "central_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "central_europe",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "arabia",
+   "b": "east_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "fertile",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "fertile",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "arabia",
+   "b": "fertile",
+   "type": "sea",
+   "weight": 0.61
+  },
+  {
+   "a": "arabia",
+   "b": "germany",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "arabia",
+   "b": "greece",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "horn",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "horn",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "arabia",
+   "b": "india",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "arabia",
+   "b": "indus",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "indus",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "arabia",
+   "b": "inner_asia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "arabia",
+   "b": "madagascar",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "nile",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "nile",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "arabia",
+   "b": "persia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "persia",
+   "type": "sea",
+   "weight": 0.97
+  },
+  {
+   "a": "arabia",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "arabia",
+   "b": "sahel",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "arabia",
+   "b": "southern_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "balkans",
+   "b": "central_europe",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "balkans",
+   "b": "central_europe",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "balkans",
+   "b": "france",
+   "type": "sea",
+   "weight": 0.63
+  },
+  {
+   "a": "balkans",
+   "b": "germany",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "balkans",
+   "b": "germany",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "balkans",
+   "b": "greece",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "balkans",
+   "b": "greece",
+   "type": "sea",
+   "weight": 0.67
+  },
+  {
+   "a": "balkans",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "balkans",
+   "b": "italy",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "balkans",
+   "b": "italy",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "balkans",
+   "b": "ruthenia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "balkans",
+   "b": "ruthenia",
+   "type": "sea",
+   "weight": 0.82
+  },
+  {
+   "a": "bengal",
+   "b": "china",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "bengal",
+   "b": "china",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "bengal",
+   "b": "india",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "bengal",
+   "b": "india",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "bengal",
+   "b": "indochina",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "bengal",
+   "b": "indochina",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "brazil",
+   "b": "british",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "brazil",
+   "b": "caribbean",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "brazil",
+   "b": "france",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "brazil",
+   "b": "france",
+   "type": "sea",
+   "weight": 1.0
+  },
+  {
+   "a": "brazil",
+   "b": "iberia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "brazil",
+   "b": "mesoamerica",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "brazil",
+   "b": "southern_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "brazil",
+   "b": "southern_cone",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "brazil",
+   "b": "southern_cone",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "brazil",
+   "b": "usa",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "brazil",
+   "b": "west_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "british",
+   "b": "canada",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "british",
+   "b": "france",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "british",
+   "b": "france",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "british",
+   "b": "germany",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "british",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "british",
+   "b": "lowlands",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "british",
+   "b": "lowlands",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "british",
+   "b": "mesoamerica",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "british",
+   "b": "nordic",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "british",
+   "b": "nordic",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "british",
+   "b": "usa",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "canada",
+   "b": "lowlands",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "canada",
+   "b": "mesoamerica",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "canada",
+   "b": "nordic",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "canada",
+   "b": "nordic",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "canada",
+   "b": "usa",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "canada",
+   "b": "usa",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "caribbean",
+   "b": "france",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "caribbean",
+   "b": "lowlands",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "caribbean",
+   "b": "mesoamerica",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "caribbean",
+   "b": "mesoamerica",
+   "type": "sea",
+   "weight": 0.83
+  },
+  {
+   "a": "caribbean",
+   "b": "usa",
+   "type": "sea",
+   "weight": 0.92
+  },
+  {
+   "a": "central_africa",
+   "b": "east_africa",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "central_africa",
+   "b": "iberia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "central_africa",
+   "b": "nigeria",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "central_africa",
+   "b": "nigeria",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "central_africa",
+   "b": "nile",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "central_africa",
+   "b": "sahel",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "central_africa",
+   "b": "southern_africa",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "central_africa",
+   "b": "southern_africa",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "central_europe",
+   "b": "france",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "central_europe",
+   "b": "germany",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "central_europe",
+   "b": "germany",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "central_europe",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "central_europe",
+   "b": "lowlands",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "central_europe",
+   "b": "nordic",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "central_europe",
+   "b": "nordic",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "central_europe",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "central_europe",
+   "b": "russia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "central_europe",
+   "b": "ruthenia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "central_europe",
+   "b": "ruthenia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "china",
+   "b": "india",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "china",
+   "b": "india",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "china",
+   "b": "indochina",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "china",
+   "b": "indochina",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "china",
+   "b": "indochina",
+   "type": "sea",
+   "weight": 0.51
+  },
+  {
+   "a": "china",
+   "b": "indus",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "china",
+   "b": "inner_asia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "china",
+   "b": "inner_asia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "china",
+   "b": "japan",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "china",
+   "b": "japan",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "china",
+   "b": "korea",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "china",
+   "b": "korea",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "china",
+   "b": "korea",
+   "type": "sea",
+   "weight": 0.85
+  },
+  {
+   "a": "china",
+   "b": "malay",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "china",
+   "b": "malay",
+   "type": "sea",
+   "weight": 0.55
+  },
+  {
+   "a": "china",
+   "b": "oceania",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "china",
+   "b": "philippines",
+   "type": "sea",
+   "weight": 0.9
+  },
+  {
+   "a": "china",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "china",
+   "b": "russia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "east_africa",
+   "b": "horn",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "east_africa",
+   "b": "horn",
+   "type": "sea",
+   "weight": 0.64
+  },
+  {
+   "a": "east_africa",
+   "b": "madagascar",
+   "type": "sea",
+   "weight": 0.71
+  },
+  {
+   "a": "east_africa",
+   "b": "nile",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "east_africa",
+   "b": "southern_africa",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "east_africa",
+   "b": "southern_africa",
+   "type": "sea",
+   "weight": 0.43
+  },
+  {
+   "a": "fertile",
+   "b": "greece",
+   "type": "sea",
+   "weight": 0.91
+  },
+  {
+   "a": "fertile",
+   "b": "nile",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "fertile",
+   "b": "nile",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "fertile",
+   "b": "persia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "france",
+   "b": "germany",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "france",
+   "b": "germany",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "france",
+   "b": "iberia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "france",
+   "b": "iberia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "france",
+   "b": "iberia",
+   "type": "sea",
+   "weight": 0.68
+  },
+  {
+   "a": "france",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "france",
+   "b": "italy",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "france",
+   "b": "italy",
+   "type": "sea",
+   "weight": 0.99
+  },
+  {
+   "a": "france",
+   "b": "lowlands",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "france",
+   "b": "lowlands",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "france",
+   "b": "madagascar",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "france",
+   "b": "maghreb",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "france",
+   "b": "sahel",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "france",
+   "b": "west_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "germany",
+   "b": "iberia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "germany",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "germany",
+   "b": "italy",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "germany",
+   "b": "lowlands",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "germany",
+   "b": "lowlands",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "germany",
+   "b": "nordic",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "germany",
+   "b": "nordic",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "germany",
+   "b": "nordic",
+   "type": "sea",
+   "weight": 0.93
+  },
+  {
+   "a": "germany",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "greece",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "greece",
+   "b": "italy",
+   "type": "sea",
+   "weight": 0.91
+  },
+  {
+   "a": "greece",
+   "b": "maghreb",
+   "type": "sea",
+   "weight": 0.78
+  },
+  {
+   "a": "horn",
+   "b": "nile",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "iberia",
+   "b": "italy",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "iberia",
+   "b": "lowlands",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "iberia",
+   "b": "maghreb",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "iberia",
+   "b": "maghreb",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "iberia",
+   "b": "maghreb",
+   "type": "sea",
+   "weight": 0.98
+  },
+  {
+   "a": "iberia",
+   "b": "nigeria",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "iberia",
+   "b": "sahel",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "iberia",
+   "b": "west_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "india",
+   "b": "indochina",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "india",
+   "b": "indochina",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "india",
+   "b": "indus",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "india",
+   "b": "indus",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "india",
+   "b": "inner_asia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "india",
+   "b": "japan",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "india",
+   "b": "korea",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "india",
+   "b": "lanka",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "india",
+   "b": "lanka",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "india",
+   "b": "madagascar",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "india",
+   "b": "malay",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "india",
+   "b": "oceania",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "india",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "indochina",
+   "b": "japan",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "indochina",
+   "b": "korea",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "indochina",
+   "b": "lanka",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "indochina",
+   "b": "malay",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "indochina",
+   "b": "malay",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "indochina",
+   "b": "malay",
+   "type": "sea",
+   "weight": 0.66
+  },
+  {
+   "a": "indochina",
+   "b": "oceania",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "indochina",
+   "b": "philippines",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "indus",
+   "b": "inner_asia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "indus",
+   "b": "persia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "inner_asia",
+   "b": "korea",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "inner_asia",
+   "b": "persia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "inner_asia",
+   "b": "persia",
+   "type": "sea",
+   "weight": 0.57
+  },
+  {
+   "a": "inner_asia",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "inner_asia",
+   "b": "russia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "inner_asia",
+   "b": "russia",
+   "type": "sea",
+   "weight": 0.72
+  },
+  {
+   "a": "italy",
+   "b": "lowlands",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "italy",
+   "b": "maghreb",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "italy",
+   "b": "maghreb",
+   "type": "sea",
+   "weight": 0.94
+  },
+  {
+   "a": "italy",
+   "b": "nigeria",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "italy",
+   "b": "sahel",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "italy",
+   "b": "west_africa",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "japan",
+   "b": "korea",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "japan",
+   "b": "korea",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "japan",
+   "b": "malay",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "japan",
+   "b": "oceania",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "japan",
+   "b": "oceania",
+   "type": "sea",
+   "weight": 0.54
+  },
+  {
+   "a": "japan",
+   "b": "philippines",
+   "type": "sea",
+   "weight": 0.67
+  },
+  {
+   "a": "japan",
+   "b": "russia",
+   "type": "sea",
+   "weight": 0.95
+  },
+  {
+   "a": "korea",
+   "b": "malay",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "korea",
+   "b": "oceania",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "korea",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "korea",
+   "b": "russia",
+   "type": "land",
+   "weight": 0.6
+  },
+  {
+   "a": "korea",
+   "b": "russia",
+   "type": "sea",
+   "weight": 0.6
+  },
+  {
+   "a": "lanka",
+   "b": "malay",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "lowlands",
+   "b": "nordic",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "lowlands",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "lowlands",
+   "b": "usa",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "madagascar",
+   "b": "malay",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "madagascar",
+   "b": "southern_africa",
+   "type": "sea",
+   "weight": 0.75
+  },
+  {
+   "a": "maghreb",
+   "b": "nile",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "maghreb",
+   "b": "sahel",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "malay",
+   "b": "oceania",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "malay",
+   "b": "oceania",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "malay",
+   "b": "oceania",
+   "type": "sea",
+   "weight": 0.87
+  },
+  {
+   "a": "malay",
+   "b": "philippines",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "malay",
+   "b": "philippines",
+   "type": "sea",
+   "weight": 0.96
+  },
+  {
+   "a": "mesoamerica",
+   "b": "nordic",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "mesoamerica",
+   "b": "usa",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "mesoamerica",
+   "b": "usa",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "nigeria",
+   "b": "sahel",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "nigeria",
+   "b": "west_africa",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "nigeria",
+   "b": "west_africa",
+   "type": "sea",
+   "weight": 0.89
+  },
+  {
+   "a": "nile",
+   "b": "sahel",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "nordic",
+   "b": "russia",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "nordic",
+   "b": "russia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "nordic",
+   "b": "usa",
+   "type": "air",
+   "weight": 0.4
+  },
+  {
+   "a": "oceania",
+   "b": "philippines",
+   "type": "sea",
+   "weight": 0.44
+  },
+  {
+   "a": "russia",
+   "b": "ruthenia",
+   "type": "air",
+   "weight": 0.3
+  },
+  {
+   "a": "russia",
+   "b": "ruthenia",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "russia",
+   "b": "usa",
+   "type": "sea",
+   "weight": 1.0
+  },
+  {
+   "a": "sahel",
+   "b": "west_africa",
+   "type": "land",
+   "weight": 1.0
+  },
+  {
+   "a": "sahel",
+   "b": "west_africa",
+   "type": "sea",
+   "weight": 0.77
+  }
+ ]
+}

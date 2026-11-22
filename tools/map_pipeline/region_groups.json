@@ -1,0 +1,508 @@
+{
+ "_doc": "宗教主题的文化地区划分：每个地区包含哪些国家（ADM0_A3 代码）。修改后重新运行 build_world_map.py --skip-relief。",
+ "groups": [
+  {
+   "id": "china",
+   "name": "中国",
+   "countries": [
+    "CHN",
+    "HKG",
+    "MAC"
+   ]
+  },
+  {
+   "id": "japan",
+   "name": "日本",
+   "countries": [
+    "JPN"
+   ]
+  },
+  {
+   "id": "korea",
+   "name": "朝鲜半岛",
+   "countries": [
+    "KOR",
+    "PRK"
+   ]
+  },
+  {
+   "id": "inner_asia",
+   "name": "内亚",
+   "countries": [
+    "MNG",
+    "KAZ",
+    "KGZ",
+    "TJK",
+    "TKM",
+    "UZB"
+   ]
+  },
+  {
+   "id": "india",
+   "name": "印度",
+   "countries": [
+    "IND"
+   ]
+  },
+  {
+   "id": "indus",
+   "name": "印度河与兴都库什",
+   "countries": [
+    "PAK",
+    "AFG"
+   ]
+  },
+  {
+   "id": "bengal",
+   "name": "孟加拉与喜马拉雅",
+   "countries": [
+    "BGD",
+    "NPL",
+    "BTN"
+   ]
+  },
+  {
+   "id": "lanka",
+   "name": "斯里兰卡与马尔代夫",
+   "countries": [
+    "LKA",
+    "MDV",
+    "IOT"
+   ]
+  },
+  {
+   "id": "indochina",
+   "name": "中南半岛",
+   "countries": [
+    "THA",
+    "VNM",
+    "MMR",
+    "KHM",
+    "LAO"
+   ]
+  },
+  {
+   "id": "malay",
+   "name": "马来群岛",
+   "countries": [
+    "IDN",
+    "MYS",
+    "SGP",
+    "BRN",
+    "TLS"
+   ]
+  },
+  {
+   "id": "philippines",
+   "name": "菲律宾",
+   "countries": [
+    "PHL"
+   ]
+  },
+  {
+   "id": "persia",
+   "name": "波斯",
+   "countries": [
+    "IRN"
+   ]
+  },
+  {
+   "id": "anatolia",
+   "name": "安纳托利亚与高加索",
+   "countries": [
+    "TUR",
+    "GEO",
+    "ARM",
+    "AZE"
+   ]
+  },
+  {
+   "id": "fertile",
+   "name": "新月沃地",
+   "countries": [
+    "IRQ",
+    "SYR",
+    "LBN",
+    "ISR",
+    "PSX",
+    "JOR"
+   ]
+  },
+  {
+   "id": "arabia",
+   "name": "阿拉伯半岛",
+   "countries": [
+    "SAU",
+    "YEM",
+    "OMN",
+    "ARE",
+    "QAT",
+    "BHR",
+    "KWT"
+   ]
+  },
+  {
+   "id": "nile",
+   "name": "尼罗河流域",
+   "countries": [
+    "EGY",
+    "SDN",
+    "SDS"
+   ]
+  },
+  {
+   "id": "maghreb",
+   "name": "马格里布",
+   "countries": [
+    "MAR",
+    "DZA",
+    "TUN",
+    "LBY",
+    "SAH"
+   ]
+  },
+  {
+   "id": "sahel",
+   "name": "萨赫勒",
+   "countries": [
+    "MRT",
+    "MLI",
+    "NER",
+    "TCD",
+    "BFA"
+   ]
+  },
+  {
+   "id": "nigeria",
+   "name": "尼日利亚",
+   "countries": [
+    "NGA"
+   ]
+  },
+  {
+   "id": "west_africa",
+   "name": "西非沿海",
+   "countries": [
+    "SEN",
+    "GMB",
+    "GNB",
+    "GIN",
+    "SLE",
+    "LBR",
+    "CIV",
+    "GHA",
+    "TGO",
+    "BEN",
+    "CPV",
+    "SHN"
+   ]
+  },
+  {
+   "id": "horn",
+   "name": "非洲之角",
+   "countries": [
+    "ETH",
+    "ERI",
+    "DJI",
+    "SOM"
+   ]
+  },
+  {
+   "id": "east_africa",
+   "name": "东非",
+   "countries": [
+    "KEN",
+    "TZA",
+    "UGA",
+    "RWA",
+    "BDI"
+   ]
+  },
+  {
+   "id": "central_africa",
+   "name": "中部非洲",
+   "countries": [
+    "COD",
+    "COG",
+    "CAF",
+    "CMR",
+    "GAB",
+    "GNQ",
+    "STP"
+   ]
+  },
+  {
+   "id": "southern_africa",
+   "name": "南部非洲",
+   "countries": [
+    "ZAF",
+    "NAM",
+    "BWA",
+    "LSO",
+    "SWZ",
+    "ZWE",
+    "ZMB",
+    "MOZ",
+    "MWI",
+    "AGO"
+   ]
+  },
+  {
+   "id": "madagascar",
+   "name": "马达加斯加与诸岛",
+   "countries": [
+    "MDG",
+    "COM",
+    "MUS",
+    "SYC"
+   ]
+  },
+  {
+   "id": "british",
+   "name": "不列颠群岛",
+   "countries": [
+    "GBR",
+    "IRL",
+    "IMN",
+    "GGY",
+    "JEY"
+   ]
+  },
+  {
+   "id": "nordic",
+   "name": "北欧",
+   "countries": [
+    "SWE",
+    "NOR",
+    "DNK",
+    "FIN",
+    "ISL",
+    "FRO",
+    "ALD",
+    "GRL"
+   ]
+  },
+  {
+   "id": "france",
+   "name": "法兰西",
+   "countries": [
+    "FRA",
+    "MCO"
+   ]
+  },
+  {
+   "id": "lowlands",
+   "name": "低地国家",
+   "countries": [
+    "NLD",
+    "BEL",
+    "LUX"
+   ]
+  },
+  {
+   "id": "germany",
+   "name": "德意志",
+   "countries": [
+    "DEU",
+    "AUT",
+    "CHE",
+    "LIE"
+   ]
+  },
+  {
+   "id": "italy",
+   "name": "意大利",
+   "countries": [
+    "ITA",
+    "SMR",
+    "MLT"
+   ]
+  },
+  {
+   "id": "iberia",
+   "name": "伊比利亚",
+   "countries": [
+    "ESP",
+    "PRT",
+    "AND",
+    "GIB"
+   ]
+  },
+  {
+   "id": "central_europe",
+   "name": "中东欧",
+   "countries": [
+    "POL",
+    "CZE",
+    "SVK",
+    "HUN",
+    "EST",
+    "LVA",
+    "LTU"
+   ]
+  },
+  {
+   "id": "balkans",
+   "name": "巴尔干",
+   "countries": [
+    "SVN",
+    "HRV",
+    "BIH",
+    "SRB",
+    "MNE",
+    "MKD",
+    "ALB",
+    "BGR",
+    "ROU",
+    "MDA"
+   ]
+  },
+  {
+   "id": "greece",
+   "name": "希腊与塞浦路斯",
+   "countries": [
+    "GRC",
+    "CYP",
+    "ESB",
+    "WSB"
+   ]
+  },
+  {
+   "id": "ruthenia",
+   "name": "乌克兰与白俄罗斯",
+   "countries": [
+    "UKR",
+    "BLR"
+   ]
+  },
+  {
+   "id": "russia",
+   "name": "俄罗斯",
+   "countries": [
+    "RUS"
+   ]
+  },
+  {
+   "id": "usa",
+   "name": "美国",
+   "countries": [
+    "USA",
+    "BMU"
+   ]
+  },
+  {
+   "id": "canada",
+   "name": "加拿大",
+   "countries": [
+    "CAN",
+    "SPM"
+   ]
+  },
+  {
+   "id": "mesoamerica",
+   "name": "墨西哥与中美洲",
+   "countries": [
+    "MEX",
+    "GTM",
+    "HND",
+    "SLV",
+    "NIC",
+    "CRI",
+    "PAN",
+    "BLZ"
+   ]
+  },
+  {
+   "id": "caribbean",
+   "name": "加勒比",
+   "countries": [
+    "ABW",
+    "AIA",
+    "ATG",
+    "BHS",
+    "BLM",
+    "BRB",
+    "CUB",
+    "CUW",
+    "CYM",
+    "DMA",
+    "DOM",
+    "GRD",
+    "HTI",
+    "JAM",
+    "KNA",
+    "LCA",
+    "MAF",
+    "MSR",
+    "PRI",
+    "SXM",
+    "TCA",
+    "TTO",
+    "VCT",
+    "VGB",
+    "VIR"
+   ]
+  },
+  {
+   "id": "brazil",
+   "name": "巴西",
+   "countries": [
+    "BRA"
+   ]
+  },
+  {
+   "id": "andes",
+   "name": "安第斯与圭亚那",
+   "countries": [
+    "COL",
+    "VEN",
+    "ECU",
+    "PER",
+    "BOL",
+    "GUY",
+    "SUR"
+   ]
+  },
+  {
+   "id": "southern_cone",
+   "name": "南锥",
+   "countries": [
+    "ARG",
+    "CHL",
+    "URY",
+    "PRY",
+    "FLK"
+   ]
+  },
+  {
+   "id": "oceania",
+   "name": "大洋洲",
+   "countries": [
+    "AUS",
+    "NZL",
+    "NFK",
+    "IOA",
+    "FJI",
+    "NCL",
+    "PNG",
+    "SLB",
+    "VUT",
+    "ASM",
+    "COK",
+    "NIU",
+    "PYF",
+    "TON",
+    "TUV",
+    "WLF",
+    "WSM",
+    "FSM",
+    "GUM",
+    "KIR",
+    "MHL",
+    "MNP",
+    "NRU",
+    "PLW"
+   ]
+  }
+ ]
+}
